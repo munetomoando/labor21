@@ -1,0 +1,1563 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>兼業と副業 丸わかり | 労働経済論 後期第6回</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<script>
+MathJax = {
+  tex: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']] },
+  chtml: { scale: 1.05 }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" id="MathJax-script" async></script>
+<style>
+:root {
+  --ink: #1f2937;
+  --ink-soft: #4b5563;
+  --muted: #6b7280;
+  --accent: #1e3a8a;
+  --accent-2: #0e7490;
+  --accent-3: #b45309;
+  --bg: #fafaf7;
+  --surface: #ffffff;
+  --line: #e5e7eb;
+  --line-soft: #f1f1ec;
+  --highlight: #fef3c7;
+  --good: #047857;
+  --danger: #b91c1c;
+}
+* { box-sizing: border-box; }
+html { -webkit-font-smoothing: antialiased; }
+body {
+  margin: 0;
+  font-family: "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-feature-settings: "palt";
+  color: var(--ink-soft);
+  background: var(--bg);
+  line-height: 1.75;
+}
+.page { max-width: 880px; margin: 0 auto; padding: 32px 24px 80px; }
+@media (max-width: 620px) { .page { padding: 20px 14px 60px; } }
+
+.cover {
+  border-left: 6px solid var(--accent);
+  padding: 20px 24px;
+  background: linear-gradient(180deg, #ffffff 0%, #f5f7fc 100%);
+  border-radius: 4px 14px 14px 4px;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, .05);
+  margin-bottom: 24px;
+}
+.cover .eyebrow { font-size: 11px; font-weight: 700; color: var(--muted); letter-spacing: .2em; margin-bottom: 6px; }
+.cover h1 { font-size: 28px; font-weight: 900; color: var(--accent); margin: 0 0 6px; line-height: 1.3; letter-spacing: .02em; }
+.cover .sub { font-size: 14px; color: var(--muted); }
+
+section { margin: 40px 0; }
+.section-title {
+  font-size: 22px; font-weight: 900; color: var(--ink);
+  margin: 0 0 16px; padding-bottom: 10px;
+  border-bottom: 2px solid var(--line);
+  display: flex; align-items: center; gap: 10px;
+  line-height: 1.3; letter-spacing: .02em;
+}
+h3 { font-size: 17px; font-weight: 700; color: var(--accent); margin: 28px 0 10px; line-height: 1.3; }
+h4 { font-size: 15px; font-weight: 700; color: var(--ink); margin: 18px 0 8px; }
+p { margin: 10px 0; font-size: 15px; }
+strong { color: var(--ink); }
+ul, ol { padding-left: 20px; }
+li { margin: 4px 0; font-size: 15px; }
+
+.step-badge {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 56px; height: 26px; padding: 0 10px; flex-shrink: 0;
+  border-radius: 999px; font-size: 11px; font-weight: 700; letter-spacing: .12em; color: white;
+}
+.step-badge.intro   { background: var(--accent); }
+.step-badge.summary { background: var(--accent); }
+.step-badge.s-teal  { background: var(--accent-2); }
+.step-badge.s-amber { background: var(--accent-3); }
+
+.toc { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 20px 0 8px; }
+@media (max-width: 620px) { .toc { grid-template-columns: 1fr; } }
+.toc a {
+  display: block; padding: 14px 16px; background: var(--surface);
+  border: 1px solid var(--line); border-radius: 14px;
+  text-decoration: none; color: var(--ink); transition: all .15s;
+}
+.toc a:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(30, 58, 138, .08); border-color: #c7d2fe; }
+.toc .num { font-family: "JetBrains Mono", monospace; font-size: 11px; font-weight: 700; color: var(--muted); letter-spacing: .2em; }
+.toc .ttl { font-size: 15px; font-weight: 700; color: var(--accent); margin: 4px 0 2px; }
+.toc .desc { font-size: 12.5px; color: var(--muted); line-height: 1.6; }
+
+.card {
+  background: var(--surface); border: 1px solid var(--line); border-radius: 14px;
+  padding: 18px 22px; margin: 16px 0; box-shadow: 0 1px 3px rgba(15, 23, 42, .04);
+}
+.callout { background: #ecfeff; border-left: 4px solid var(--accent-2); border-radius: 4px 10px 10px 4px; padding: 12px 16px; margin: 14px 0; }
+.callout.step2 { background: #fff7ed; border-left-color: var(--accent-3); }
+.callout.intro { background: #eef2ff; border-left-color: var(--accent); }
+.callout p { margin: 6px 0; font-size: 14.5px; }
+.callout ul { margin: 6px 0; }
+.callout li { font-size: 14.5px; }
+
+.note { background: #fffbeb; border: 1px solid #fde68a; border-radius: 10px; padding: 14px 16px; font-size: 14.5px; margin: 14px 0; }
+.note .tag { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: .1em; color: #92400e; margin-right: 8px; }
+.note p { margin: 4px 0; font-size: 14.5px; }
+.note li { font-size: 14.5px; }
+
+.math-block { background: #f8f8f3; border: 1px dashed #d6d3c7; border-radius: 10px; padding: 14px 18px; margin: 14px 0; font-size: 16px; overflow-x: auto; }
+
+.discuss { background: #ecfeff; border-left: 4px solid var(--accent-2); border-radius: 4px 12px 12px 4px; padding: 14px 18px; margin: 18px 0; }
+.discuss-head { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+.discuss-tag { font-size: 11px; font-weight: 700; letter-spacing: .12em; color: #fff; background: var(--accent-2); padding: 3px 10px; border-radius: 999px; }
+.discuss-q { font-size: 15px; font-weight: 700; color: var(--ink); margin: 4px 0; line-height: 1.7; }
+.discuss-hint { font-size: 13.5px; color: var(--ink-soft); margin-top: 6px; }
+.discuss-hint summary { cursor: pointer; font-weight: 700; color: var(--accent-2); font-size: 13px; }
+.discuss-hint summary:hover { color: var(--accent); }
+.discuss-hint .body { padding: 8px 0 0; font-size: 13.5px; }
+.discuss-hint .body p, .discuss-hint .body li { font-size: 13.5px; }
+
+.answer-box { background: #fffbeb; border: 1px solid #fde68a; border-radius: 12px; padding: 14px 16px; margin: 14px 0; }
+.answer-head { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+.answer-tag { font-size: 11px; font-weight: 700; letter-spacing: .12em; color: #92400e; background: #fef3c7; padding: 3px 10px; border-radius: 999px; }
+.answer-id { font-family: "JetBrains Mono", monospace; font-size: 12px; font-weight: 700; color: var(--accent-3); letter-spacing: .06em; }
+.answer-q { font-size: 14px; color: var(--ink); margin: 4px 0 8px; line-height: 1.7; font-weight: 500; }
+textarea.answer-input {
+  width: 100%; min-height: 90px; padding: 10px 12px;
+  border: 1px solid #e5d99c; border-radius: 8px; background: #fffef9;
+  font-family: inherit; font-size: 14px; color: var(--ink); resize: vertical; line-height: 1.6;
+}
+textarea.answer-input:focus { outline: none; border-color: var(--accent-3); background: #ffffff; }
+.answer-save { display: inline-block; margin-top: 6px; font-size: 11.5px; color: var(--muted); }
+.answer-save.saved { color: var(--good); font-weight: 700; }
+
+.legend { display: flex; flex-wrap: wrap; gap: 6px 16px; margin-top: 8px; font-size: 12px; color: var(--muted); }
+.legend .item { display: inline-flex; align-items: center; gap: 6px; }
+.legend .sw { width: 16px; height: 3px; border-radius: 2px; display: inline-block; }
+.legend .box { width: 12px; height: 12px; border-radius: 3px; display: inline-block; border: 1px solid rgba(0,0,0,.08); }
+.legend .dot { width: 9px; height: 9px; border-radius: 50%; display: inline-block; }
+
+table { border-collapse: collapse; width: 100%; font-size: 14px; margin: 14px 0; }
+th, td { border: 1px solid var(--line); padding: 8px 10px; text-align: center; }
+th { background: #f5f5ef; font-weight: 700; }
+td.lead { text-align: left; font-weight: 700; color: var(--ink); }
+td.left { text-align: left; }
+td.highlight { background: var(--highlight); font-weight: 700; }
+.table-wrap { overflow-x: auto; }
+.num-cell { font-family: "JetBrains Mono", monospace; font-size: 13px; }
+
+.static-graph { background: #fcfcfa; border: 1px solid var(--line-soft); border-radius: 10px; padding: 12px; margin: 14px 0; }
+.static-graph svg { display: block; width: 100%; max-width: 680px; height: auto; margin: 0 auto; }
+.caption { font-size: 12.5px; color: var(--muted); text-align: center; margin-top: 6px; }
+.src { font-size: 12px; color: var(--muted); margin-top: 4px; text-align: right; }
+.src a { color: var(--muted); }
+
+.graph-wrap { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 18px; margin: 18px 0; }
+.graph-title { font-size: 13px; font-weight: 700; color: var(--muted); letter-spacing: .06em; margin-bottom: 10px; }
+.graph-wrap canvas { display: block; width: 100%; height: 360px; touch-action: none; }
+.graph-wrap svg { display: block; width: 100%; height: auto; }
+.controls { display: flex; flex-wrap: wrap; gap: 16px 24px; margin-top: 14px; }
+.control { flex: 1 1 200px; display: flex; flex-direction: column; gap: 4px; }
+.control label { font-size: 12px; font-weight: 700; color: var(--ink-soft); }
+.control input[type=range] { width: 100%; accent-color: var(--accent); }
+.readout {
+  font-family: "JetBrains Mono", monospace; font-size: 13px; color: var(--ink);
+  background: #f5f5ef; border-radius: 6px; padding: 3px 8px; display: inline-block;
+}
+.verdict { margin-top: 12px; font-size: 14px; padding: 10px 14px; border-radius: 10px; background: #f8f8f3; border: 1px solid var(--line); }
+.verdict.good { border-color: #a7f3d0; background: #ecfdf5; }
+.verdict.bad  { border-color: #fecaca; background: #fef2f2; }
+.verdict b.good { color: var(--good); }
+.verdict b.bad  { color: var(--danger); }
+
+.goal-list { list-style: none; padding: 0; margin: 12px 0; }
+.goal-list li { background: #ffffff; border: 1px solid var(--line); border-radius: 10px; padding: 10px 14px; margin: 8px 0; font-size: 14px; }
+.goal-list li .gnum {
+  display: inline-block; font-family: "JetBrains Mono", monospace; font-size: 11px; font-weight: 700;
+  color: #fff; background: var(--accent); padding: 2px 8px; border-radius: 999px; margin-right: 8px; letter-spacing: .04em;
+}
+
+.split { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 14px 0; }
+@media (max-width: 620px) { .split { grid-template-columns: 1fr; } }
+.split .card { margin: 0; }
+.split .card h4 { margin-top: 0; }
+
+.kv-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 14px 0; }
+.kv-grid.three { grid-template-columns: 1fr 1fr 1fr; }
+@media (max-width: 620px) { .kv-grid, .kv-grid.three { grid-template-columns: 1fr; } }
+.kv { background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 10px 14px; }
+.kv .big { font-family: "JetBrains Mono", monospace; font-size: 22px; font-weight: 700; color: var(--accent-2); }
+.kv .big.amber { color: var(--accent-3); }
+.kv .lbl { font-size: 12.5px; color: var(--muted); }
+
+.fill { display: inline-block; min-width: 60px; border-bottom: 1.5px solid var(--accent-3); text-align: center; color: var(--accent-3); font-weight: 700; padding: 0 4px; }
+.fills-hidden .fill { color: transparent; user-select: none; }
+.toggle-btn {
+  font-family: inherit; font-size: 12.5px; font-weight: 700; color: var(--accent-3);
+  background: #fff7ed; border: 1px solid #fed7aa; border-radius: 999px; padding: 4px 14px; cursor: pointer;
+}
+.toggle-btn:hover { background: #ffedd5; }
+
+.steps3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 14px 0; }
+@media (max-width: 620px) { .steps3 { grid-template-columns: 1fr; } }
+.stepbox { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 12px 15px; }
+.stepbox .sn { font-family: "JetBrains Mono", monospace; font-size: 22px; font-weight: 700; color: var(--accent-2); line-height: 1; }
+.stepbox .sn.amber { color: var(--accent-3); }
+.stepbox .st { font-size: 14px; font-weight: 700; color: var(--ink); margin: 5px 0 2px; }
+.stepbox .sd { font-size: 12.5px; color: var(--muted); line-height: 1.6; }
+
+.seg { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; overflow: hidden; background: #fff; }
+.seg button {
+  font-family: inherit; font-size: 12.5px; font-weight: 700; color: var(--ink-soft);
+  background: transparent; border: 0; padding: 5px 14px; cursor: pointer;
+}
+.seg button + button { border-left: 1px solid var(--line); }
+.seg button.on { background: var(--accent); color: #fff; }
+
+.footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--line); font-size: 12px; color: var(--muted); text-align: center; }
+a.inline-link { color: var(--accent-2); }
+
+/* 就業規則の条文 */
+.rule { background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 12px 16px; font-size: 13.5px; line-height: 1.8; }
+.rule .art { font-weight: 700; color: var(--ink); }
+.rule ol { margin: 4px 0; padding-left: 22px; }
+.rule li { font-size: 13.5px; margin: 2px 0; }
+.rule .strike { color: var(--danger); font-weight: 700; text-decoration: underline; }
+.rule .new { color: var(--good); font-weight: 700; }
+
+/* メリット・デメリットの4象限 */
+.quad { display: grid; grid-template-columns: 90px 1fr 1fr; gap: 0; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: #fff; margin: 14px 0; }
+.quad > div { padding: 12px 14px; border-bottom: 1px solid var(--line); }
+.quad > div:nth-last-child(-n+3) { border-bottom: 0; }
+.quad .hd { background: #f5f5ef; font-size: 12.5px; font-weight: 700; text-align: center; color: var(--ink); }
+.quad .rh { background: #f8f9fd; font-size: 13px; font-weight: 700; color: var(--accent); display: flex; align-items: center; justify-content: center; text-align: center; border-right: 1px solid var(--line); }
+.quad .m { border-right: 1px solid var(--line); }
+.quad ul { margin: 0; padding-left: 18px; }
+.quad li { font-size: 13.5px; margin: 2px 0; }
+.quad .hd.m-h { color: var(--good); border-right: 1px solid var(--line); }
+.quad .hd.d-h { color: var(--danger); }
+@media (max-width: 620px) { .quad { grid-template-columns: 64px 1fr 1fr; } .quad li { font-size: 12.5px; } }
+
+/* 裁判例カード */
+.cases { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 14px 0; }
+@media (max-width: 620px) { .cases { grid-template-columns: 1fr; } }
+.case { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 12px 15px; }
+.case .nm { font-weight: 700; color: var(--ink); font-size: 14.5px; }
+.case .dt { font-family: "JetBrains Mono", monospace; font-size: 11.5px; color: var(--muted); }
+.case .fact { font-size: 13.5px; margin: 6px 0; }
+.case details summary { cursor: pointer; font-size: 12.5px; font-weight: 700; color: var(--accent-2); }
+.case .res { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: .1em; padding: 2px 10px; border-radius: 999px; color: #fff; margin: 6px 6px 0 0; }
+.case .res.ok { background: var(--accent-3); }
+.case .res.ng { background: var(--accent-2); }
+.case .why { font-size: 13px; color: var(--ink-soft); margin-top: 4px; }
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- COVER -->
+<div class="cover">
+  <div class="eyebrow">労働経済論 後期第6回 補助教材</div>
+  <h1>兼業と副業 ― なぜ働く人は「もう一つの仕事」を持つのか</h1>
+  <div class="sub">副業を希望する人も、実際に副業をする人も増えている。しかし、希望を実現できている人は1割程度にとどまる。副業をしているのは本業の所得が低い層と高い層に二極化しており、企業の側にも認める理由と認めない理由がある。2018年の「副業解禁」から、裁判例、労働時間の通算という制度上の課題、そして本業で働ける時間に上限があるときに副業を選ぶ「労働時間制約モデル」までを通して、副業・兼業を経済学の目で考える</div>
+</div>
+
+<!-- TOC -->
+<nav class="toc">
+  <a href="#intro">
+    <div class="num">00 / INTRO</div>
+    <div class="ttl">前回の復習と本日のゴール</div>
+    <div class="desc">働き方の未来の穴埋め</div>
+  </a>
+  <a href="#status">
+    <div class="num">01 / 現状</div>
+    <div class="ttl">副業とは ― 増える希望者と副業者</div>
+    <div class="desc">就業構造基本調査／希望を実現できる人は1割</div>
+  </a>
+  <a href="#who">
+    <div class="num">02 / 誰が</div>
+    <div class="ttl">どのような人が、なぜ副業をするのか</div>
+    <div class="desc">所得階層による二極化／副業を選んだ理由</div>
+  </a>
+  <a href="#firm">
+    <div class="num">03 / 企業</div>
+    <div class="ttl">企業は副業をどう考えているのか</div>
+    <div class="desc">認める理由・認めない理由／メリットとデメリット</div>
+  </a>
+  <a href="#lift">
+    <div class="num">04 / 解禁</div>
+    <div class="ttl">副業の解禁と裁判例</div>
+    <div class="desc">モデル就業規則の改定／禁止できる4つの場合</div>
+  </a>
+  <a href="#issue">
+    <div class="num">05 / 課題</div>
+    <div class="ttl">副業・兼業の課題 ― 労働時間の通算</div>
+    <div class="desc">長時間労働と健康管理／割増賃金は誰が払うのか</div>
+  </a>
+  <a href="#econ">
+    <div class="num">06 / 経済学</div>
+    <div class="ttl">経済学の視点から</div>
+    <div class="desc">今のため・将来のため／推進すべきか／どんな副業を選ぶか</div>
+  </a>
+  <a href="#model">
+    <div class="num">07 / モデル</div>
+    <div class="ttl">収入を補うための副業</div>
+    <div class="desc">Shishko &amp; Rostker（1976）の労働時間制約モデル</div>
+  </a>
+  <a href="#task">
+    <div class="num">08 / 検討課題</div>
+    <div class="ttl">副業したいですか？</div>
+    <div class="desc">自分のキャリアとして考える／モデルから何が言えるか</div>
+  </a>
+  <a href="#summary">
+    <div class="num">09 / SUMMARY</div>
+    <div class="ttl">まとめと次回までの課題</div>
+    <div class="desc">本日のポイント／参考文献／テレワークの事前学習</div>
+  </a>
+</nav>
+
+<!-- INTRO -->
+<section id="intro">
+  <h2 class="section-title"><span class="step-badge intro">INTRO</span>前回の復習と本日のゴール</h2>
+
+  <p>後期第5回では、人口減少による人手不足と急速な技術進歩による失業という二つの理由から、<strong>働き方の未来</strong>を考えた。今回はその各論として、<strong>兼業・副業</strong>を扱う。</p>
+
+  <h3>前回の穴埋め ― 言葉を思い出そう</h3>
+  <p style="margin-bottom:6px;"><button type="button" class="toggle-btn" id="fillToggle">答えを隠す</button></p>
+  <div class="card" id="fillCard">
+    <ul>
+      <li>これから私たちの働き方が変わる理由の一つ目は、<span class="fill">人口減少</span>による人手不足。
+        <ul>
+          <li>日本の総人口は<span class="fill">2008</span>年をピークに減少している。</li>
+          <li>15歳から64歳までの<span class="fill">生産年齢</span>人口が、人数で見ても割合でも減少する。</li>
+          <li>地理的にも<span class="fill">過疎化</span>と<span class="fill">都市集中</span>が進む。</li>
+        </ul>
+      </li>
+      <li>二つ目の理由は、<span class="fill">急速</span>な<span class="fill">技術進歩</span>による失業。
+        <ul>
+          <li>技術進歩により人の仕事が奪われることを、経済学では<span class="fill">技術的失業</span>という。</li>
+          <li>失業した人が人手不足の業界で働くことができないのは、<span class="fill">スキル</span>の<span class="fill">ミスマッチ</span>が原因。</li>
+        </ul>
+      </li>
+      <li>これから<span class="fill">労働移動</span>が増加するが、前向きなものと後ろ向きなものがある。</li>
+      <li>同一労働同一賃金などにより、<span class="fill">未経験者</span>を企業が自前で育てることが減少する。</li>
+      <li>職場における労働者が同質的な時代とは異なり、企業における<span class="fill">マネジメント</span>も変化する。</li>
+    </ul>
+  </div>
+
+  <div class="callout intro">
+    <p>前回、人手不足への対策の一つとして<strong>「副業・兼業の活用」</strong>を挙げた。また、労働移動が避けられない時代には、<strong>一つの会社に頼らずに収入やスキルを確保する</strong>ことの意味が大きくなる。副業は、働き手を増やす手段であり、同時に働く人にとっての<strong>保険</strong>や<strong>学びの場</strong>にもなりうる。では、なぜ多くの人は希望しても副業をしないのだろうか。</p>
+  </div>
+
+  <h3>本日のゴール</h3>
+  <ol class="goal-list">
+    <li><span class="gnum">G1</span>副業を希望する人と副業者が<strong>増えている</strong>一方で、<strong>希望を実現できる人は1割程度</strong>であることをデータで説明できる</li>
+    <li><span class="gnum">G2</span>副業者が<strong>本業の所得の低い層と高い層に二極化</strong>していることと、その理由の違いを説明できる</li>
+    <li><span class="gnum">G3</span>企業が副業を<strong>認める理由・認めない理由</strong>を、労使双方のメリット・デメリットとして整理できる</li>
+    <li><span class="gnum">G4</span>2018年の<strong>モデル就業規則の改定</strong>と、副業を<strong>例外的に禁止できる4つの場合</strong>を説明できる</li>
+    <li><span class="gnum">G5</span><strong>労働時間の通算</strong>と割増賃金の負担という制度上の課題を説明できる</li>
+    <li><span class="gnum">G6</span><strong>労働時間制約モデル</strong>を使って、どんなときに、どのくらいの長さの副業をするのかを説明できる</li>
+  </ol>
+</section>
+
+<!-- STATUS -->
+<section id="status">
+  <h2 class="section-title"><span class="step-badge s-teal">現状</span>副業とは ― 増える希望者と副業者</h2>
+
+  <div class="callout">
+    <p><strong>副業</strong>とは、本業がある人が、週末や夜間などに働き、<strong>本業以外の収入源を持つ</strong>ことである。英語では <strong>moonlighting</strong>（月明かりの下で働く）という。</p>
+  </div>
+
+  <h3>副業を希望する人も、副業をする人も増えている</h3>
+  <p>総務省「就業構造基本調査」で、5年ごとの変化を見てみよう。下のボタンで、<strong>副業を希望している雇用者</strong>と、実際に<strong>雇用者として複数の仕事をしている人</strong>（雇用×雇用）を切り替えられる。</p>
+  <div class="graph-wrap">
+    <div class="graph-title">副業希望者と副業者の推移（就業構造基本調査）</div>
+    <div style="margin-bottom:10px;">
+      <div class="seg" id="trendSeg" style="flex-wrap:wrap;">
+        <button type="button" data-k="0" class="on">副業を希望している雇用者</button>
+        <button type="button" data-k="1">副業者（雇用×雇用）</button>
+      </div>
+    </div>
+    <svg viewBox="0 0 680 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="1992年から2022年までの副業希望者数と副業者数の推移。副業希望者は235万人から478万人に、副業者は76万人から170万人に増えた">
+      <g id="trendChart"></g>
+    </svg>
+    <div class="legend" id="trendLegend"></div>
+  </div>
+  <p class="src">出典：総務省「就業構造基本調査」</p>
+
+  <div class="kv-grid">
+    <div class="kv"><div class="big">2.0<span style="font-size:13px;"> 倍</span></div><div class="lbl">副業希望者数（1992年 235.1万人 → 2022年 477.6万人）。雇用者に占める割合は 4.5％ → 7.9％</div></div>
+    <div class="kv"><div class="big amber">2.2<span style="font-size:13px;"> 倍</span></div><div class="lbl">副業者数（雇用×雇用、1992年 75.7万人 → 2022年 169.8万人）。雇用者に占める割合は 1.4％ → 2.8％</div></div>
+  </div>
+
+  <h3>希望を実現している人は1割程度</h3>
+  <p>リクルートワークス研究所「全国就業実態パネル調査」は、同じ人を毎年追いかける調査である。<strong>副業・兼業を希望する人</strong>は雇用者の3割を超えるが、<strong>前年に希望していた人のうち、翌年に実際に副業をした人</strong>は1割に満たない。</p>
+  <div class="graph-wrap">
+    <div class="graph-title">副業・兼業の希望と実現（全国就業実態パネル調査）</div>
+    <div style="margin-bottom:10px;">
+      <div class="seg" id="rwSeg" style="flex-wrap:wrap;">
+        <button type="button" data-k="0" class="on">副業・兼業希望者の割合</button>
+        <button type="button" data-k="1">前年希望者の当年実施率</button>
+      </div>
+    </div>
+    <svg viewBox="0 0 680 270" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="副業・兼業希望者の割合は雇用者全体で30〜36％、前年の希望者が翌年に副業を実施した割合は9〜10％程度で推移している">
+      <g id="rwChart"></g>
+    </svg>
+    <div class="legend">
+      <span class="item"><span class="sw" style="background:#0e7490"></span>雇用者全体</span>
+      <span class="item"><span class="sw" style="background:#b45309"></span>正規雇用者</span>
+    </div>
+  </div>
+  <p class="src">出所：リクルートワークス研究所「全国就業実態パネル調査」</p>
+
+  <div class="callout step2">
+    <p>希望者は3割を超えるのに、実現するのは<strong>そのうちの1割</strong>に満たない。しかも、<strong>正規雇用者の方が実施率が低い</strong>。希望と実現の間には、本業の忙しさ、会社のルール、手続きの面倒さなど、何らかの<strong>障壁</strong>があると考えられる。その障壁が何かを、以下で企業側と働く側の両方から見ていこう。</p>
+  </div>
+
+  <div class="discuss">
+    <div class="discuss-head"><span class="discuss-tag">考えてみよう</span></div>
+    <div class="discuss-q">皆さんは、大学を卒業して就職したら、すぐに副業をしたいだろうか。それとも、少し経ってから考えるだろうか。</div>
+    <div class="discuss-hint">
+      <details>
+        <summary>考えるヒント</summary>
+        <div class="body">
+          <p>理由を「お金」「やりたいこと」「スキル」「将来のリスクへの備え」に分けて考えると整理しやすい。この問いは、最後の<a href="#task" class="inline-link">検討課題</a>で回答欄に書き込もう。</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- WHO -->
+<section id="who">
+  <h2 class="section-title"><span class="step-badge s-amber">誰が</span>どのような人が、なぜ副業をするのか</h2>
+
+  <h3>副業者は低所得層と高所得層に二極化している</h3>
+  <p>本業の所得階層ごとに、副業をしている人の数（棒）と、その階層の雇用者に占める割合（線）を見てみよう。人数では低所得層が多いが、<strong>割合で見ると両端が高い「U字型」</strong>になっている。</p>
+  <div class="graph-wrap">
+    <div class="graph-title">本業の所得階層別に見た副業をしている者の数（2017年）</div>
+    <div style="margin-bottom:10px;">
+      <div class="seg" id="incSeg" style="flex-wrap:wrap;">
+        <button type="button" data-k="0" class="on">雇用者全体</button>
+        <button type="button" data-k="1">うち正規の職員・従業員</button>
+      </div>
+    </div>
+    <svg viewBox="0 0 680 310" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="本業の所得階層別の副業者数と割合。雇用者全体では99万円未満で6.6％、1000万円以上で6.4％と両端が高いU字型。正規の職員・従業員でも同様">
+      <g id="incChart"></g>
+    </svg>
+    <div class="legend">
+      <span class="item"><span class="box" style="background:#d6a35c"></span>副業者数（千人、左軸）</span>
+      <span class="item"><span class="sw" style="background:#0e7490"></span>その所得階層の雇用者に占める割合（％、右軸）</span>
+    </div>
+    <div class="verdict" id="incVerdict"></div>
+  </div>
+  <p class="src">出典：総務省「平成29年就業構造基本調査」。本業は「雇用者」、副業は「雇用者」だけでなく「自営業主」「家族従事者」を含む</p>
+
+  <div class="kv-grid three">
+    <div class="kv"><div class="big">6.25<span style="font-size:13px;"> ％</span></div><div class="lbl">本業所得 299万円以下の副業実施割合</div></div>
+    <div class="kv"><div class="big" style="color:var(--muted);">2.82<span style="font-size:13px;"> ％</span></div><div class="lbl">本業所得 300万〜999万円</div></div>
+    <div class="kv"><div class="big amber">6.25<span style="font-size:13px;"> ％</span></div><div class="lbl">本業所得 1000万円以上</div></div>
+  </div>
+  <p class="src">2022年就業構造基本調査の分析に基づく値（総務省の公表）</p>
+
+  <div class="split">
+    <div class="card" style="border-left:4px solid var(--accent-2);">
+      <h4>低所得層の副業</h4>
+      <p style="font-size:14px;">本業の収入だけでは生活が苦しいので、<strong>収入を補う</strong>ために働く。所得が299万円以下の雇用者のうち、「正規の職員・従業員」は15.7％、「非正規の職員・従業員」は77.8％。非正規で短時間しか働けない人が、<strong>複数の仕事を掛け持ち</strong>している姿が浮かぶ。</p>
+    </div>
+    <div class="card" style="border-left:4px solid var(--accent-3);">
+      <h4>高所得層の副業</h4>
+      <p style="font-size:14px;">専門性を活かした講演・執筆・コンサルティング、役員の兼任など。収入だけでなく、<strong>やりたい仕事</strong>や<strong>スキル・人脈</strong>を目的とすることが多い。同じ「副業」でも、<strong>中身と動機がまったく違う</strong>。</p>
+    </div>
+  </div>
+
+  <h3>副業・兼業を行う理由</h3>
+  <p>副業を選んだ理由は、<strong>十分な収入の確保</strong>、<strong>自分がやりたい仕事であること</strong>、<strong>スキルアップ・資格の活用</strong>などさまざまである。副業も雇用で働く人（雇用×雇用）と、副業は自営やフリーランスで働く人（雇用×非雇用）を比べてみよう。</p>
+  <div class="graph-wrap">
+    <div class="graph-title">副業を選択した理由と今後の希望</div>
+    <div style="margin-bottom:10px;">
+      <div class="seg" id="rsnSeg" style="flex-wrap:wrap;">
+        <button type="button" data-k="0" class="on">現在の働き方（副業）を選択した理由</button>
+        <button type="button" data-k="1">今後の働き方の希望</button>
+      </div>
+    </div>
+    <svg viewBox="0 0 680 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="副業を選択した理由は、十分な収入が雇用×非雇用43％・雇用×雇用44％で最多。自分のやりたい仕事は雇用×非雇用で32％と高い">
+      <g id="rsnChart"></g>
+    </svg>
+    <div class="legend">
+      <span class="item"><span class="box" style="background:#d6a35c"></span>雇用×非雇用（n=1,030）</span>
+      <span class="item"><span class="box" style="background:#1e3a8a"></span>雇用×雇用（n=1,030）</span>
+    </div>
+  </div>
+
+  <div class="callout">
+    <p>どちらのタイプでも<strong>「十分な収入」</strong>が最大の理由である。一方で、副業が自営などの<strong>雇用×非雇用</strong>では<strong>「自分のやりたい仕事」</strong>が3割を超え、お金以外の目的も大きい。また、副業をしている人の6割前後が<strong>「今後も兼業・副業を続けたい」</strong>と答えている。</p>
+  </div>
+</section>
+
+<!-- FIRM -->
+<section id="firm">
+  <h2 class="section-title"><span class="step-badge s-teal">企業</span>企業は副業をどう考えているのか</h2>
+
+  <h3>大企業ほど「認めている」― 経団連の調査</h3>
+  <div class="graph-wrap">
+    <div class="graph-title">社外への送出：副業・兼業を認めているか（経団連 2022）</div>
+    <div style="margin-bottom:10px;">
+      <div class="seg" id="kdSeg" style="flex-wrap:wrap;">
+        <button type="button" data-k="0" class="on">常用労働者数別</button>
+        <button type="button" data-k="1">自律的なキャリア形成支援の取り組み別</button>
+      </div>
+    </div>
+    <svg viewBox="0 0 680 290" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="経団連調査で社外での副業・兼業を認めている企業は53.1％。5000人以上では66.7％、100人未満では31.6％">
+      <g id="kdChart"></g>
+    </svg>
+    <div class="legend">
+      <span class="item"><span class="box" style="background:#1e3a8a"></span>認めている</span>
+      <span class="item"><span class="box" style="background:#93a5cf"></span>認める予定</span>
+      <span class="item"><span class="box" style="background:#d1d5db"></span>検討していない</span>
+      <span class="item"><span class="box" style="background:#f1f1ec"></span>認める予定はない</span>
+    </div>
+  </div>
+  <p class="src">出所：経団連（2022）「副業・兼業に関するアンケート調査結果」。会員企業を対象とした調査で、規模の大きな企業が多い点に注意</p>
+
+  <h3>全体では「認めていない」企業も4割強 ― 東京商工リサーチの調査</h3>
+  <p>中小企業を多く含む調査では、姿が少し変わる。特に<strong>大企業の66.3％が「認めていない」</strong>と答えている点は、経団連の調査とは対照的である（調査対象や大企業の定義が異なる）。</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th style="text-align:left;">従業員の兼業・副業を認めているか</th><th>中小企業</th><th>大企業</th><th>全企業</th></tr></thead>
+      <tbody>
+        <tr><td class="lead">積極的に認めている</td><td class="num-cell">12.68%</td><td class="num-cell">1.94%</td><td class="num-cell">11.78%</td></tr>
+        <tr><td class="lead">条件付きで認めている</td><td class="num-cell highlight">45.82%</td><td class="num-cell">31.74%</td><td class="num-cell highlight">44.64%</td></tr>
+        <tr><td class="lead">認めていない</td><td class="num-cell">41.49%</td><td class="num-cell highlight">66.30%</td><td class="num-cell">43.57%</td></tr>
+        <tr><td class="lead" style="font-weight:400;color:var(--muted);">回答社数</td><td class="num-cell">5,061社</td><td class="num-cell">463社</td><td class="num-cell">5,524社</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="split">
+    <div class="card" style="padding:14px 16px;">
+      <h4 style="color:var(--good);">認めている理由（全企業、複数回答）</h4>
+      <div class="table-wrap">
+        <table style="font-size:13px;margin:6px 0;">
+          <tbody>
+            <tr><td class="left">従業員の収入向上に寄与するため</td><td class="num-cell highlight">71.89%</td></tr>
+            <tr><td class="left">人材の獲得のため</td><td class="num-cell">31.32%</td></tr>
+            <tr><td class="left">スキル・経験の本業への還元を期待</td><td class="num-cell">27.30%</td></tr>
+            <tr><td class="left">エンゲージメント（会社との結びつき）向上</td><td class="num-cell">23.97%</td></tr>
+            <tr><td class="left">その他</td><td class="num-cell">3.89%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size:12.5px;color:var(--muted);margin:4px 0 0;">回答 2,978社。大企業ではエンゲージメント（42.75％）や人材獲得（41.37％）も高い</p>
+    </div>
+    <div class="card" style="padding:14px 16px;">
+      <h4 style="color:var(--danger);">認めていない理由（全企業、複数回答）</h4>
+      <div class="table-wrap">
+        <table style="font-size:13px;margin:6px 0;">
+          <tbody>
+            <tr><td class="left">本業のパフォーマンス低下が懸念される</td><td class="num-cell highlight">74.79%</td></tr>
+            <tr><td class="left">社内ルールや就業規則の整備が難しい</td><td class="num-cell">43.45%</td></tr>
+            <tr><td class="left">労働時間の通算管理が煩雑</td><td class="num-cell">40.65%</td></tr>
+            <tr><td class="left">情報漏洩や利益相反の懸念がある</td><td class="num-cell">28.76%</td></tr>
+            <tr><td class="left">その他</td><td class="num-cell">2.71%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size:12.5px;color:var(--muted);margin:4px 0 0;">回答 2,246社。大企業では通算管理（50.18％）やルール整備（51.32％）を挙げる割合も高い</p>
+    </div>
+  </div>
+  <p class="src">出典：東京商工リサーチ（2025）「2025年 企業の『兼業・副業』に関するアンケート調査」</p>
+
+  <h3>副業・兼業が禁止されている理由</h3>
+  <p>「許可する予定はない」とする企業に理由を聞くと、<strong>過重労働による本業への支障</strong>と<strong>労働時間の管理・把握の難しさ</strong>が上位を占める。</p>
+  <div class="static-graph">
+    <svg viewBox="0 0 680 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="副業・兼業を許可しない理由。過重労働となり本業に支障をきたすためが82.7％、労働時間の管理・把握が困難になるが45.3％">
+      <g id="jilptBars"></g>
+    </svg>
+    <div class="caption">副業・兼業を許可しない理由（複数回答、％、n＝1,714）。「副業・兼業の許可する予定はない」とする企業が対象</div>
+  </div>
+  <p class="src">出典：JILPT（2018）「多様な働き方の進展と人材マネジメントの在り方に関する調査（企業調査・労働者調査）」</p>
+
+  <h3>副業・兼業のメリットとデメリット</h3>
+  <p>企業と従業員の双方にとってのメリット（効果・期待）とデメリット（課題・不安）を整理すると、次のようになる。</p>
+  <div class="quad">
+    <div class="hd"></div><div class="hd m-h">メリット（効果・期待）</div><div class="hd d-h">デメリット（課題・不安）</div>
+    <div class="rh">企業<br>（使用者）</div>
+    <div class="m"><ul><li>人材育成</li><li>優秀な人材の獲得・流出防止</li><li>新たな知識・顧客・経営資源の獲得</li></ul></div>
+    <div><ul><li>本業への支障</li><li>人材の流出等</li><li>従業員の健康配慮</li><li>情報漏洩等、様々なリスク管理</li></ul></div>
+    <div class="rh">従業員<br>（労働者）</div>
+    <div class="m"><ul><li>所得増加</li><li>自身の能力・キャリア選択肢の拡大</li><li>自己実現の追求・幸福感の向上</li><li>創業に向けた準備期間の確保</li></ul></div>
+    <div><ul><li>就業時間の増加による本業への支障等</li><li>本業・副業間でのタスク管理の困難さ</li></ul></div>
+  </div>
+  <p class="src">出所：中小企業庁・経済産業省（2017）「兼業・副業を通じた創業・新事業創出に関する調査事業研究会提言 ～パラレルキャリア・ジャパンを目指して～」より抜粋</p>
+
+  <div class="callout step2">
+    <p>「人材の獲得・流出防止」はメリットに、「人材の流出」はデメリットにも入っている。副業を認めることで優秀な人が集まる一方、社外の仕事を経験した人が<strong>転職や独立</strong>する可能性も高まる。前期に学んだ<strong>企業特殊的訓練と一般的訓練</strong>の区別で考えると、副業で身につくのは主に<strong>一般的な技能</strong>である。</p>
+  </div>
+</section>
+
+<!-- LIFT -->
+<section id="lift">
+  <h2 class="section-title"><span class="step-badge s-amber">解禁</span>副業の解禁と裁判例</h2>
+
+  <h3>2018年は「副業解禁元年」</h3>
+  <ul>
+    <li><strong>働き方改革</strong>の一環として、柔軟な働き方がしやすい環境の整備が進められた。</li>
+    <li>厚生労働省が作成している<strong>モデル就業規則</strong>（多くの企業が就業規則を作るときに参考にしてきたひな形）に、副業・兼業の推進に向けた記述が入った。</li>
+  </ul>
+  <div class="split">
+    <div>
+      <div class="graph-title">従来のモデル就業規則</div>
+      <div class="rule">
+        <div class="art">第11条（遵守事項）</div>
+        労働者は、以下の事項を守らなければならない。
+        <ol>
+          <li>許可なく職務以外の目的で会社の施設、物品等を使用しないこと。</li>
+          <li>（略）</li>
+          <li>勤務中は職務に専念し、正当な理由なく勤務場所を離れないこと。</li>
+          <li>会社の名誉や信用を損なう行為をしないこと。</li>
+          <li>在職中及び退職後においても、業務上知り得た会社、取引先等の機密を漏洩しないこと。</li>
+          <li class="strike">許可なく他の会社等の業務に従事しないこと。</li>
+          <li>酒気を帯びて就業しないこと。</li>
+          <li>その他労働者としてふさわしくない行為をしないこと。</li>
+        </ol>
+        <div class="art" style="margin-top:6px;">第62条（懲戒の事由）</div>
+        ⑦ <span class="strike">第11条</span>、第13条、第14条に違反したとき。（けん責、減給又は出勤停止）
+      </div>
+    </div>
+    <div>
+      <div class="graph-title">新しいモデル就業規則（2018年〜）</div>
+      <div class="rule">
+        <div class="art">第11条（遵守事項）</div>
+        「許可なく他の会社等の業務に従事しないこと」を<strong>削除</strong>。
+        <div class="art" style="margin-top:8px;">第70条（副業・兼業）</div>
+        <span class="new">労働者は、勤務時間外において、他の会社等の業務に従事することができる。</span>
+        <p style="font-size:13.5px;margin:6px 0 2px;">2　会社は、労働者からの前項の業務に従事する旨の<strong>届出</strong>に基づき、当該労働者が当該業務に従事することにより次の各号のいずれかに該当する場合には、これを禁止又は制限することができる。</p>
+        <ol>
+          <li>労務提供上の支障がある場合</li>
+          <li>企業秘密が漏洩する場合</li>
+          <li>会社の名誉や信用を損なう行為や、信頼関係を破壊する行為がある場合</li>
+          <li>競業により、企業の利益を害する場合</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <div class="callout">
+    <p>「原則禁止・許可制」から<strong>「原則自由・届出制」</strong>へ。副業を<strong>例外的に禁止・制限できる</strong>場合が、4つに限定して明示された。</p>
+  </div>
+
+  <h3>なぜ方針転換があったのか ― 裁判例の考え方</h3>
+  <p>実は、方針転換は新しい考え方ではない。裁判例では、もともと<strong>勤務時間外の時間の利用は原則として労働者の自由</strong>とされてきた。例外的に副業や兼業を禁止できるのは、次の場合である。</p>
+  <div class="steps3" style="grid-template-columns:repeat(4,1fr);">
+    <div class="stepbox"><div class="sn">1</div><div class="st">労務提供上の支障</div><div class="sd">本業への労務提供に支障がある。</div></div>
+    <div class="stepbox"><div class="sn">2</div><div class="st">企業秩序への影響</div><div class="sd">企業秘密が漏洩するなど。</div></div>
+    <div class="stepbox"><div class="sn amber">3</div><div class="st">信頼関係の破壊</div><div class="sd">信頼関係を破壊する行為がある。</div></div>
+    <div class="stepbox"><div class="sn amber">4</div><div class="st">競業</div><div class="sd">副業・兼業が競業に当たる。</div></div>
+  </div>
+
+  <h3>裁判例 ― 判断を予想してみよう</h3>
+  <p>次の事件で、会社の処分（解雇・不許可）は認められたのだろうか。上の4つの基準に当てはめて予想してから、「判断を見る」を開こう。</p>
+  <div class="cases">
+    <div class="case">
+      <div class="nm">マンナ運輸事件</div>
+      <div class="dt">京都地判 平成24年7月13日</div>
+      <div class="fact">運送会社の運転手が、アルバイトの兼業を申請したが、会社が許可しなかった。</div>
+      <details><summary>判断を見る</summary>
+        <span class="res ng">不許可は不法行為</span>
+        <div class="why">労働者の兼業は<strong>原則として許されなければならない</strong>。使用者が合理的に判断するために<strong>事前の申請制</strong>にすることは許されるが、上の基準で判断すべきとされた。</div>
+      </details>
+    </div>
+    <div class="case">
+      <div class="nm">小川建設事件</div>
+      <div class="dt">東京地決 昭和57年11月19日</div>
+      <div class="fact">事務員が、会社に無断で、毎日6時間、終業後にキャバレーで働いていた。</div>
+      <details><summary>判断を見る</summary>
+        <span class="res ok">解雇は有効</span>
+        <div class="why">毎日6時間という長時間の兼業は、余暇の利用の範囲を超え、<strong>本業への労務提供に支障</strong>をきたす蓋然性が高いと判断された（基準1）。</div>
+      </details>
+    </div>
+    <div class="case">
+      <div class="nm">橋元運輸事件</div>
+      <div class="dt">名古屋地判 昭和47年4月28日</div>
+      <div class="fact">会社の管理職が、競業他社の取締役に就任した。</div>
+      <details><summary>判断を見る</summary>
+        <span class="res ok">懲戒解雇は有効</span>
+        <div class="why">競業する会社の経営に関与することは、<strong>企業秩序や信頼関係</strong>を損ない、<strong>競業</strong>に当たる（基準2〜4）。</div>
+      </details>
+    </div>
+    <div class="case">
+      <div class="nm">東京都私立大学教授事件</div>
+      <div class="dt">東京地判 平成20年12月5日</div>
+      <div class="fact">大学教授が、無許可で通訳などの業務に従事した。</div>
+      <details><summary>判断を見る</summary>
+        <span class="res ng">解雇は無効</span>
+        <div class="why">兼業は<strong>夜間や休日</strong>に行われており、<strong>本業への悪影響は認められない</strong>とされた。</div>
+      </details>
+    </div>
+    <div class="case">
+      <div class="nm">十和田運輸事件</div>
+      <div class="dt">東京地判 平成13年6月5日</div>
+      <div class="fact">運送会社の運転手が、年に1、2回、貨物運送のアルバイトをした。</div>
+      <details><summary>判断を見る</summary>
+        <span class="res ng">解雇は無効</span>
+        <div class="why">年に1、2回程度では<strong>本業に支障はなく</strong>、企業との<strong>信頼関係を破壊するとも言えない</strong>とされた。</div>
+      </details>
+    </div>
+    <div class="case">
+      <div class="nm">タイミー事件</div>
+      <div class="dt">東京地判 令和7年3月27日</div>
+      <div class="fact">スキマバイトで働いた労働者が、本業との労働時間の通算で法定時間を超えたとして、割増賃金を請求した。</div>
+      <details><summary>判断を見る</summary>
+        <span class="res ng">割増賃金の支払義務なし</span>
+        <div class="why">他社で働いていることを<strong>使用者が知らなかった</strong>場合には、労働時間を通算した<strong>割増賃金の支払義務は生じない</strong>とされた。次の節の「労働時間の通算」とつながる論点である。</div>
+      </details>
+    </div>
+  </div>
+
+  <div class="note">
+    <span class="tag">ポイント</span>
+    <p>処分が認められたのは、<strong>長時間で本業に支障がある</strong>か、<strong>競業</strong>に当たる場合である。夜間や休日の短い副業、たまのアルバイトを理由にした解雇は無効とされた。モデル就業規則の第70条は、こうした<strong>裁判例の考え方を明文化した</strong>ものと言える。</p>
+  </div>
+</section>
+
+<!-- ISSUE -->
+<section id="issue">
+  <h2 class="section-title"><span class="step-badge s-teal">課題</span>副業・兼業の課題 ― 労働時間の通算</h2>
+
+  <div class="steps3">
+    <div class="stepbox"><div class="sn">1</div><div class="st">長時間労働を招かないか</div><div class="sd">本業と副業を合わせると、働く時間が長くなりすぎるおそれがある。</div></div>
+    <div class="stepbox"><div class="sn">2</div><div class="st">労働時間の把握と健康管理</div><div class="sd">別の会社での労働時間を、誰がどうやって把握し、健康を守るのか。</div></div>
+    <div class="stepbox"><div class="sn amber">3</div><div class="st">時間外労働の算定</div><div class="sd">法定労働時間を超えた分の割増賃金を、どちらの会社が払うのか。</div></div>
+  </div>
+
+  <h3>割増賃金は誰が支払うべきか</h3>
+  <ul>
+    <li>1日8時間、週40時間の<strong>法定労働時間</strong>を超える時間外労働をさせるためには、労働基準法36条に基づく協定（<strong>36協定</strong>）のほかに、<strong>割増賃金</strong>が必要である。</li>
+    <li>現行法では、本業も副業も雇用の場合は、<strong>労働時間を通算</strong>して割増賃金の有無を決める（労働基準法38条1項）。</li>
+    <li>所定労働時間を通算するときは、<strong>先に契約した事業主の時間から順に</strong>数える。そのため、法定労働時間を超えた部分は、原則として<strong>後から契約した事業主</strong>の時間外労働になる。</li>
+  </ul>
+
+  <div class="graph-wrap">
+    <div class="graph-title">試してみよう ― 労働時間の通算と割増賃金</div>
+    <div style="margin-bottom:10px;display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;">
+      <div class="seg" id="otOrder">
+        <button type="button" data-k="A" class="on">Aと先に契約</button>
+        <button type="button" data-k="B">Bと先に契約</button>
+      </div>
+      <div class="seg" id="otKnow">
+        <button type="button" data-k="1" class="on">後の事業主は副業を知っている</button>
+        <button type="button" data-k="0">知らない</button>
+      </div>
+    </div>
+    <svg viewBox="0 0 680 170" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="事業主Aと事業主Bの1日の所定労働時間を、先に契約した順に積み上げ、8時間を超えた部分を法定外労働として示す図">
+      <g id="otChart"></g>
+    </svg>
+    <div class="controls">
+      <div class="control">
+        <label>事業主A（本業）の所定労働時間 <span class="readout" id="otAOut">5 時間</span></label>
+        <input type="range" id="otA" min="1" max="8" step="0.5" value="5">
+      </div>
+      <div class="control">
+        <label>事業主B（副業）の所定労働時間 <span class="readout" id="otBOut">4 時間</span></label>
+        <input type="range" id="otB" min="1" max="8" step="0.5" value="4">
+      </div>
+      <div class="control">
+        <label>後から契約した事業主の時給 <span class="readout" id="otWOut">1,200 円</span></label>
+        <input type="range" id="otW" min="1000" max="3000" step="50" value="1200">
+      </div>
+    </div>
+    <div class="verdict" id="otVerdict"></div>
+  </div>
+
+  <div class="callout step2">
+    <p>Aで5時間、Bで4時間働くと、合計9時間で1時間が法定外労働になる。Aとの契約が先なら、<strong>短時間しか働かせていないBが割増賃金を払う</strong>ことになる。これでは、副業を受け入れる側の企業は<strong>割増賃金と管理の手間</strong>を嫌い、副業者を雇いにくくなる。企業の4割が「通算管理が煩雑」と答えたのはこのためである。現在、労働基準法の見直しの議論の中で、<strong>割増賃金の算定における通算をやめる</strong>（健康確保のための労働時間の通算は残す）ことが検討されている。</p>
+  </div>
+</section>
+
+<!-- ECON -->
+<section id="econ">
+  <h2 class="section-title"><span class="step-badge s-amber">経済学</span>経済学の視点から</h2>
+
+  <h3>なぜ副業をするのか ― 今のため、将来のため</h3>
+  <div class="split">
+    <div class="card" style="border-left:4px solid var(--accent-2);">
+      <h4>今のため（消費の動機）</h4>
+      <ul style="margin:4px 0;">
+        <li style="font-size:14px;"><strong>お金が欲しい</strong>から ―「お金のために」</li>
+        <li style="font-size:14px;"><strong>やってみたい仕事</strong>だったから、楽しいから ―「やってみたい仕事」</li>
+      </ul>
+    </div>
+    <div class="card" style="border-left:4px solid var(--accent-3);">
+      <h4>将来のため（投資の動機）</h4>
+      <ul style="margin:4px 0;">
+        <li style="font-size:14px;"><strong>経験や技能</strong>が身につく ―「技能や経験を得る」（人的資本投資）</li>
+        <li style="font-size:14px;"><strong>本業が失われるリスク</strong>への対策（保険・分散）</li>
+      </ul>
+    </div>
+  </div>
+  <p>前回学んだ技術的失業や後ろ向きの労働移動を考えると、<strong>将来のため</strong>の副業の意味は大きくなる。ただし、目的が違えば<strong>選ぶべき副業も違う</strong>。</p>
+
+  <h3>副業を推進するべきか ― 欧州と日本の議論</h3>
+  <div class="split">
+    <div class="card">
+      <h4>欧州の議論</h4>
+      <p style="font-size:14px;"><strong>技能や経験が身に付くこと</strong>や<strong>リスク軽減</strong>に注目する。</p>
+      <ul style="margin:4px 0;">
+        <li style="font-size:14px;">より社会的要請が強く賃金が高い仕事に<strong>スムースに移行</strong>できる。</li>
+        <li style="font-size:14px;"><strong>起業を促進</strong>できることから、推進すべき。</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>日本の議論</h4>
+      <p style="font-size:14px;"><strong>長時間労働による健康被害</strong>が中心的な課題。</p>
+      <ul style="margin:4px 0;">
+        <li style="font-size:14px;">そもそも<strong>本業で生活できる収入</strong>を得ることが基本とする意見もある。</li>
+        <li style="font-size:14px;"><strong>安全な形</strong>で行えるように注意しながら進めるべきという考えもある。</li>
+        <li style="font-size:14px;">日本的雇用慣行の下では、<strong>柔軟な配置転換</strong>などを通じて、副業をしなくても複数の仕事を体験できる。</li>
+      </ul>
+    </div>
+  </div>
+  <p>政府は<a class="inline-link" href="https://www.mhlw.go.jp/content/11200000/000962665.pdf" target="_blank" rel="noopener">「副業・兼業の促進に関するガイドライン」</a>（2022年7月再改定）を示して、阻害要因を減らそうとしている。</p>
+
+  <h3>どのような副業をするべきか</h3>
+  <div class="card">
+    <ul>
+      <li><strong>リスクとリターンの関係</strong>をよく考える。多くの労働者にとって、お金を得る目的であれば<strong>本業で頑張るのが最もリターンが大きい</strong>（本業の方が時給が高く、昇進や昇給にもつながる）。</li>
+      <li><strong>本業との関係</strong>
+        <ul>
+          <li><strong>補完的なもの</strong>：副業で得た技能や人脈が本業の生産性を高める（例：本業の分野での講演や執筆）。</li>
+          <li><strong>代替的なもの</strong>：本業と関係がなく、時間や体力を奪い合う（例：本業と無関係な深夜のアルバイト）。</li>
+        </ul>
+      </li>
+      <li><strong>本業に支障が出にくいもの</strong>：オンラインでの仕事などで、<strong>時間的・空間的な制約が下がっている</strong>。</li>
+      <li><strong>何種類くらいの副業が良いのか</strong>：リスク分散は大切だが、<strong>分散投資のしすぎは効率的ではない</strong>。どの仕事でも経験が浅いままになり、専門性が育たない。</li>
+    </ul>
+  </div>
+
+  <div class="note">
+    <span class="tag">前回とのつながり</span>
+    <p>前回は、<strong>独立で補完的な得意分野を組み合わせる</strong>と希少性が高まることを学んだ。本業と<strong>補完的な副業</strong>は、まさにその組み合わせを作る手段になりうる。一方で、分野を増やしすぎると、それぞれで上位に入ることが難しくなる。</p>
+  </div>
+</section>
+
+<!-- MODEL -->
+<section id="model">
+  <h2 class="section-title"><span class="step-badge s-teal">モデル</span>収入を補うための副業</h2>
+
+  <p>ここでは、<strong>収入を補うための副業</strong>を、前期に学んだ<strong>労働時間の選択モデル</strong>（消費と余暇の選択モデル）で考える。Shishko and Rostker（1976）の<strong>労働時間制約（hours-constrained）モデル</strong>である。</p>
+
+  <div class="card">
+    <h4 style="margin-top:0;">モデルの設定</h4>
+    <ul>
+      <li>副業をするのは、<strong>本業で時間外労働などができず、収入が不足している</strong>から。</li>
+      <li>本業の時給を $w$、副業の時給を $\hat{w}$ とし、<strong>$\hat{w} < w$</strong>（副業の時給の方が低い）と仮定する。</li>
+      <li>本業では、1日あたり<strong>$\bar{H} = 8$ 時間</strong>しか働くことができない。</li>
+      <li>1日の時間 $T = 24$ を、本業 $h$、副業 $m$、余暇 $L$ に分ける。働かなくても得られる所得（仕送りや配偶者の所得など）を $V$ とする。</li>
+    </ul>
+  </div>
+  <div class="math-block">$$
+\begin{aligned}
+&\max_{C,\,L}\; U(C, L) = C^{\alpha} L^{1-\alpha} \\
+&\text{s.t.}\quad C = V + w h + \hat{w} m,\qquad h + m + L = T,\qquad h \le \bar{H}
+\end{aligned}
+$$</div>
+
+  <p>予算線は、本業の8時間までは傾き $w$、それを超えると副業の傾き $\hat{w}$ になるので、<strong>余暇 $L = T - \bar{H} = 16$ のところで折れ曲がる</strong>。この<strong>折れ曲がり点（キンク）</strong>で、無差別曲線の傾き（限界代替率 MRS）と副業の時給 $\hat{w}$ を比べるのが分析の鍵である。</p>
+
+  <div class="graph-wrap">
+    <div class="graph-title">シミュレーター ― どんなときに、どのくらいの副業をするのか</div>
+    <canvas id="mlCanvas" aria-label="横軸に余暇、縦軸に消費をとった予算線と無差別曲線。本業の上限8時間のところで予算線が折れ曲がる"></canvas>
+    <div class="legend">
+      <span class="item"><span class="sw" style="background:#0e7490"></span>予算線（本業）</span>
+      <span class="item"><span class="sw" style="background:#b45309"></span>予算線（副業）</span>
+      <span class="item"><span class="sw" style="background:#9ca3af"></span>本業で制約がなかった場合の予算線（破線）</span>
+      <span class="item"><span class="sw" style="background:#64748b"></span>無差別曲線</span>
+      <span class="item"><span class="dot" style="background:#dc2626"></span>最適点</span>
+    </div>
+    <div class="controls">
+      <div class="control">
+        <label>本業の時給 $w$ <span class="readout" id="mlWOut">1,500 円</span></label>
+        <input type="range" id="mlW" min="800" max="3000" step="50" value="1500">
+      </div>
+      <div class="control">
+        <label>副業の時給 $\hat{w}$（$\le w$） <span class="readout" id="mlWhOut">1,000 円</span></label>
+        <input type="range" id="mlWh" min="400" max="3000" step="50" value="1000">
+      </div>
+      <div class="control">
+        <label>本業の労働時間の上限 $\bar{H}$ <span class="readout" id="mlHOut">8 時間</span></label>
+        <input type="range" id="mlH" min="4" max="12" step="0.5" value="8">
+      </div>
+      <div class="control">
+        <label>働かなくても得られる所得 $V$ <span class="readout" id="mlVOut">0 円</span></label>
+        <input type="range" id="mlV" min="0" max="12000" step="500" value="0">
+      </div>
+      <div class="control">
+        <label>消費を重視する度合い $\alpha$ <span class="readout" id="mlAOut">0.50</span></label>
+        <input type="range" id="mlA" min="0.3" max="0.8" step="0.01" value="0.5">
+      </div>
+    </div>
+    <div class="verdict" id="mlVerdict"></div>
+    <div class="verdict" id="mlStatics" style="background:#fffef9;"></div>
+  </div>
+
+  <div class="callout">
+    <p>副業をするかどうかは、<strong>キンクでの限界代替率</strong>と<strong>副業の時給</strong>の比較で決まる。キンクで「もう1時間余暇を手放してもよいと思える消費の量」（MRS）が副業の時給 $\hat{w}$ より小さければ、副業で1時間働く方が満足度が上がる。</p>
+  </div>
+  <div class="math-block">$$
+\text{副業をする条件：}\quad \mathrm{MRS}\big|_{L = T - \bar{H}} = \frac{1-\alpha}{\alpha}\cdot\frac{V + w\bar{H}}{T - \bar{H}} \;<\; \hat{w}
+$$</div>
+  <p>この条件と最適な副業時間の求め方は、最後の<a href="#task" class="inline-link">検討課題</a>で自分で導いてみよう（スライドの問い「この設定で何が言えるのかを検討してみよう」）。</p>
+</section>
+
+<!-- TASK -->
+<section id="task">
+  <h2 class="section-title"><span class="step-badge s-amber">検討課題</span>副業したいですか？</h2>
+
+  <div class="steps3">
+    <div class="stepbox">
+      <div class="sn">1</div>
+      <div class="st">一人で考える</div>
+      <div class="sd">まず自分の考えを回答欄に書き出す。理由を「今のため／将来のため」に分けるとよい。</div>
+    </div>
+    <div class="stepbox">
+      <div class="sn">2</div>
+      <div class="st">グループで比べる</div>
+      <div class="sd">「すぐにしたい」「しない」の理由の違いを話し合う。</div>
+    </div>
+    <div class="stepbox">
+      <div class="sn">3</div>
+      <div class="st">理論とつなげる</div>
+      <div class="sd">労働時間制約モデル、補完と代替、人的資本投資のどれで説明できるかを考える。</div>
+    </div>
+  </div>
+
+  <h3>検討課題1 ― 副業したいですか？</h3>
+  <div class="card">
+    <p style="margin-top:0;">皆さんは、大学を卒業後に就職する人がほとんどだと思います。</p>
+    <ul>
+      <li>新入社員になってから<strong>すぐに</strong>兼業・副業をしたいですか？ するとしたらなぜですか？ またしないとしたらなぜですか？</li>
+      <li>働き出してから<strong>少し経ってから</strong>兼業・副業する希望はありますか？ どんな状態になったら兼業・副業を検討しますか？</li>
+    </ul>
+  </div>
+  <div class="answer-box">
+    <div class="answer-head"><span class="answer-tag">あなたの考え</span><span class="answer-id">TASK 1</span></div>
+    <div class="answer-q">新入社員になってすぐに副業をしたいか。その理由は。</div>
+    <textarea class="answer-input" data-qid="t1" placeholder="したい／したくない：&#10;理由："></textarea>
+    <span class="answer-save" data-for="t1">未保存</span>
+  </div>
+  <div class="answer-box">
+    <div class="answer-head"><span class="answer-tag">あなたの考え</span><span class="answer-id">TASK 2</span></div>
+    <div class="answer-q">働き出してから少し経って、どんな状態になったら副業を検討するか。どのような副業を選ぶか（本業と補完的か、代替的か）。</div>
+    <textarea class="answer-input" data-qid="t2" placeholder="検討する状態：&#10;選ぶ副業：&#10;本業との関係（補完的／代替的）："></textarea>
+    <span class="answer-save" data-for="t2">未保存</span>
+  </div>
+  <div class="discuss-hint" style="margin:-4px 0 10px;">
+    <details>
+      <summary>考えるヒント</summary>
+      <div class="body">
+        <ul>
+          <li>新入社員の時期は、本業で<strong>企業特殊的な技能</strong>を集中的に学ぶ時期でもある。副業に時間を使うことの<strong>機会費用</strong>は何だろうか。</li>
+          <li>副業の目的が「お金」なら、本業で頑張る方がリターンが大きいことが多い。目的が「技能」や「リスクへの備え」なら、どんな副業が合理的だろうか。</li>
+          <li>会社が副業を認めているかどうか（就業規則）、労働時間の通算や健康管理も、現実の判断に影響する。</li>
+        </ul>
+      </div>
+    </details>
+  </div>
+
+  <h3>検討課題2 ― 収入を補うための副業モデルで何が言えるか</h3>
+  <div class="card">
+    <p style="margin-top:0;">スライドの問い：<strong>どれだけAIを使っても良いので、この設定で何が言えるのかを検討してみよう！</strong></p>
+    <ul>
+      <li><strong>どんなときに</strong>副業をするのか（副業をする条件）。</li>
+      <li><strong>どのくらいの長さ</strong>の副業をするのか（最適な副業時間 $m^*$）。</li>
+      <li>本業の時給 $w$、副業の時給 $\hat{w}$、本業の時間の上限 $\bar{H}$、それ以外の所得 $V$ が変わると、副業の時間はどう変わるか。</li>
+    </ul>
+    <p>上の<a href="#model" class="inline-link">シミュレーター</a>でパラメータを動かしながら、結果を言葉で説明してみよう。</p>
+  </div>
+  <div class="answer-box">
+    <div class="answer-head"><span class="answer-tag">あなたの考え</span><span class="answer-id">TASK 3</span></div>
+    <div class="answer-q">副業をする条件、最適な副業時間、各パラメータが変わったときの影響を書いてみよう。</div>
+    <textarea class="answer-input" data-qid="t3" placeholder="副業をする条件：&#10;最適な副業時間：&#10;w が上がると：&#10;ŵ が上がると：&#10;H̄ が増えると："></textarea>
+    <span class="answer-save" data-for="t3">未保存</span>
+  </div>
+  <div class="discuss-hint" style="margin:-4px 0 10px;">
+    <details>
+      <summary>解答例を見る（自分で考えてから開こう）</summary>
+      <div class="body">
+        <p><strong>1. 副業をする条件。</strong>本業で8時間働いたキンク（$L = T - \bar{H}$、$C = V + w\bar{H}$）での限界代替率が $\hat{w}$ より小さいとき。Cobb-Douglas型なら</p>
+        <div class="math-block">$$\frac{1-\alpha}{\alpha}\cdot\frac{V + w\bar{H}}{T-\bar{H}} < \hat{w}$$</div>
+        <p>本業の時給 $w$ で好きなだけ働けるとしても8時間を超えて働きたい人（制約に縛られている人）のうち、さらに副業の低い時給でも働きたい人だけが副業をする。</p>
+        <p><strong>2. 最適な副業時間。</strong>副業の部分の予算線は $C = V + w\bar{H} + \hat{w}(T - \bar{H} - L)$。Cobb-Douglas型の需要関数から $L^* = (1-\alpha)\{V + w\bar{H} + \hat{w}(T-\bar{H})\}/\hat{w}$ なので</p>
+        <div class="math-block">$$m^* = T - \bar{H} - L^* = \alpha (T-\bar{H}) - (1-\alpha)\,\frac{V + w\bar{H}}{\hat{w}}$$</div>
+        <p><strong>3. 比較静学。</strong></p>
+        <ul>
+          <li>$\partial m^*/\partial w < 0$：<strong>本業の時給が上がると副業の時間は減る</strong>。本業の時間は8時間で固定なので、$w$ の上昇は余暇の価格を変えず、所得だけを増やす（<strong>純粋な所得効果</strong>）。余暇が正常財なら、副業を減らす。</li>
+          <li>$\partial m^*/\partial \hat{w} > 0$：このモデルでは<strong>副業の時給が上がると副業の時間は増える</strong>（代替効果が所得効果を上回る）。</li>
+          <li>$\partial m^*/\partial \bar{H} < 0$：<strong>本業で働ける時間が増えると副業は減る</strong>。時間外労働ができるなら、副業をする必要がなくなる。</li>
+          <li>$\partial m^*/\partial V < 0$：<strong>他の所得が多いほど副業は減る</strong>。</li>
+        </ul>
+        <p>Shishko and Rostker（1976）は、アメリカのデータでこうした予測を検証し、本業の賃金が高いほど副業時間が短いことなどを示した。<strong>収入を補うための副業は、本業で十分に働けない・稼げない人に集中する</strong>ので、所得の低い層に副業者が多いこととも整合的である。一方で、高所得層の副業は、このモデルでは説明しにくい（<strong>お金以外の目的</strong>や<strong>副業の時給が本業より高い</strong>場合を考える必要がある）。</p>
+      </div>
+    </details>
+  </div>
+</section>
+
+<!-- SUMMARY -->
+<section id="summary">
+  <h2 class="section-title"><span class="step-badge summary">SUMMARY</span>まとめと次回までの課題</h2>
+
+  <h3>本日の流れ</h3>
+  <ul>
+    <li><strong>現状</strong>：副業希望者は30年で<strong>約2倍</strong>（2022年 478万人、雇用者の7.9％）、副業者（雇用×雇用）は<strong>約2.2倍</strong>（170万人、2.8％）。しかし、前年の希望者のうち翌年に副業を実施したのは<strong>1割に満たない</strong>。</li>
+    <li><strong>誰が</strong>：副業者は本業所得の<strong>低い層と高い層に二極化</strong>（U字型）。最大の理由は<strong>十分な収入</strong>だが、自営などでは<strong>やりたい仕事</strong>も大きい。</li>
+    <li><strong>企業</strong>：大企業ほど認める傾向がある調査もあれば、4割強が認めていない調査もある。認めない理由は<strong>本業への支障</strong>と<strong>労働時間の管理</strong>。</li>
+    <li><strong>解禁</strong>：2018年のモデル就業規則で<strong>原則自由・届出制</strong>へ。禁止できるのは、<strong>労務提供上の支障・企業秘密の漏洩・信頼関係の破壊・競業</strong>の4つの場合で、これは<strong>裁判例の考え方</strong>と一致する。</li>
+    <li><strong>課題</strong>：雇用×雇用では<strong>労働時間を通算</strong>し、原則として<strong>後から契約した事業主</strong>が割増賃金を払う。これが副業者を受け入れる障壁になっている。</li>
+    <li><strong>経済学</strong>：副業の動機は<strong>今のため</strong>（お金・やりたい仕事）と<strong>将来のため</strong>（技能・リスク対策）。お金が目的なら本業で頑張るのが基本で、<strong>本業と補完的な副業</strong>を選ぶことが大切。</li>
+    <li><strong>モデル</strong>：本業の時間に上限があるとき、<strong>キンクでの MRS が副業の時給より小さい</strong>人が副業をする。本業の時給や他の所得が高いほど、副業の時間は<strong>短くなる</strong>。</li>
+  </ul>
+
+  <div class="callout">
+    <p>副業は「働き手を増やす」人手不足対策であると同時に、働く人にとっては<strong>収入の補填</strong>、<strong>人的資本への投資</strong>、<strong>本業を失うリスクへの保険</strong>という複数の顔を持つ。どの顔が大きいかは人によって違い、それに応じて<strong>望ましい制度</strong>（健康確保を重視するか、移行や起業を促すか）も変わる。</p>
+  </div>
+
+  <h3>主要な参考文献</h3>
+  <ul style="font-size:14px;">
+    <li>Shishko, R. and B. Rostker (1976) "The Economics of Multiple Job Holding," <i>American Economic Review</i>, 66(3), pp.298-308</li>
+    <li>総務省「就業構造基本調査」（平成29年、令和4年）</li>
+    <li>リクルートワークス研究所「全国就業実態パネル調査」</li>
+    <li>経団連（2022）「副業・兼業に関するアンケート調査結果」</li>
+    <li>東京商工リサーチ（2025）「2025年 企業の『兼業・副業』に関するアンケート調査」</li>
+    <li>労働政策研究・研修機構（2018）「多様な働き方の進展と人材マネジメントの在り方に関する調査（企業調査・労働者調査）」</li>
+    <li>中小企業庁・経済産業省（2017）「兼業・副業を通じた創業・新事業創出に関する調査事業研究会提言 ～パラレルキャリア・ジャパンを目指して～」</li>
+    <li>厚生労働省「モデル就業規則」、<a class="inline-link" href="https://www.mhlw.go.jp/content/11200000/000962665.pdf" target="_blank" rel="noopener">「副業・兼業の促進に関するガイドライン」</a>（2022年7月再改定）</li>
+  </ul>
+
+  <div class="note">
+    <span class="tag">次回までの課題</span>
+    <p>次回は、自宅やサテライトオフィス等で働く<strong>テレワーク</strong>を希望する労働者が増えていることに注目し、会社と労働者の双方から、どのようなメリットとデメリットがあるのかを整理する。</p>
+    <p><strong>事前学習：</strong></p>
+    <ul style="margin:6px 0;">
+      <li><strong>どのような企業がテレワークを積極的に認めているのか</strong>、また<strong>どのような企業は出社を求めているのか</strong>を調べてみよう。</li>
+    </ul>
+  </div>
+
+  <div class="note">
+    <span class="tag">メモ</span>
+    <p>検討課題の回答欄に記入した内容は、ブラウザ内（localStorage）に自動で保存されます。同じ端末・同じブラウザでこのページを再度開けば、続きから読み直せます。</p>
+  </div>
+</section>
+
+<div class="footer">
+  労働経済論 後期第6回「兼業と副業」補助教材<br>
+  日本大学 経済学部 / 安藤至大
+</div>
+
+</div>
+
+<script>
+/* =========================================
+   前回の穴埋め：答えの表示／非表示
+   ========================================= */
+function bindToggle(btnId, cardId, showLabel, hideLabel) {
+  const btn = document.getElementById(btnId);
+  const card = document.getElementById(cardId);
+  btn.addEventListener("click", () => {
+    const hidden = card.classList.toggle("fills-hidden");
+    btn.textContent = hidden ? showLabel : hideLabel;
+  });
+}
+bindToggle("fillToggle", "fillCard", "答えを表示する", "答えを隠す");
+
+/* =========================================
+   SVG ユーティリティ
+   ========================================= */
+const SVGNS = "http://www.w3.org/2000/svg";
+function el(tag, attrs, parent, text) {
+  const e = document.createElementNS(SVGNS, tag);
+  for (const k in attrs) e.setAttribute(k, attrs[k]);
+  if (text !== undefined) e.textContent = text;
+  if (parent) parent.appendChild(e);
+  return e;
+}
+function clear(g) { while (g.firstChild) g.removeChild(g.firstChild); }
+const fmt = n => n.toLocaleString("ja-JP");
+const MONO = "JetBrains Mono, monospace";
+function bindSeg(id, onPick) {
+  const btns = document.querySelectorAll("#" + id + " button");
+  btns.forEach(b => b.addEventListener("click", () => {
+    btns.forEach(x => x.classList.toggle("on", x === b));
+    onPick(b.dataset.k);
+  }));
+}
+
+/* =========================================
+   副業希望者と副業者の推移（就業構造基本調査）
+   ========================================= */
+(function () {
+  const g = document.getElementById("trendChart");
+  const YEARS = [1992, 1997, 2002, 2007, 2012, 2017, 2022];
+  const D = [
+    { name: "副業希望者", n: [2351, 2682, 2772, 2993, 3237, 3850, 4776], r: [4.5, 4.9, 5.1, 5.2, 5.7, 6.5, 7.9], nMax: 6000, rMax: 9, bar: "#1e3a8a", line: "#b45309" },
+    { name: "複数就業者", n: [757, 892, 815, 1029, 1050, 1288, 1698], r: [1.4, 1.6, 1.5, 1.8, 1.8, 2.2, 2.8], nMax: 1800, rMax: 3, bar: "#d6a35c", line: "#0e7490" }
+  ];
+  const L = 62, R = 610, T = 20, B = 260;
+  function draw(k) {
+    const d = D[k];
+    clear(g);
+    const Y = v => B - v / d.nMax * (B - T);
+    const Yr = v => B - v / d.rMax * (B - T);
+    for (let i = 0; i <= 6; i++) {
+      const v = d.nMax / 6 * i;
+      el("line", { x1: L, x2: R, y1: Y(v), y2: Y(v), stroke: "#eceae3" }, g);
+      el("text", { x: L - 8, y: Y(v) + 4, "font-size": 11, fill: "#6b7280", "text-anchor": "end", "font-family": MONO }, g, fmt(v));
+      el("text", { x: R + 8, y: Yr(d.rMax / 6 * i) + 4, "font-size": 11, fill: d.line, "font-family": MONO }, g, (d.rMax / 6 * i).toFixed(1));
+    }
+    el("text", { x: L - 8, y: T - 8, "font-size": 11, fill: "#6b7280", "text-anchor": "end" }, g, "（千人）");
+    el("text", { x: R + 8, y: T - 8, "font-size": 11, fill: d.line }, g, "（％）");
+    el("line", { x1: L, x2: R, y1: B, y2: B, stroke: "#6b7280", "stroke-width": 1.2 }, g);
+    const step = (R - L) / YEARS.length, bw = 40;
+    const pts = [];
+    YEARS.forEach((yr, i) => {
+      const cx = L + step * (i + .5);
+      el("rect", { x: cx - bw / 2, y: Y(d.n[i]), width: bw, height: B - Y(d.n[i]), rx: 3, fill: d.bar, "fill-opacity": .85 }, g);
+      el("text", { x: cx, y: B - 8, "font-size": 11, fill: "#fff", "text-anchor": "middle", "font-family": MONO, "font-weight": 700 }, g, fmt(d.n[i]));
+      el("text", { x: cx, y: B + 18, "font-size": 11, fill: "#6b7280", "text-anchor": "middle", "font-family": MONO }, g, yr);
+      pts.push([cx, Yr(d.r[i])]);
+    });
+    el("path", { d: pts.map((p, i) => (i ? "L" : "M") + p[0].toFixed(1) + "," + p[1].toFixed(1)).join(" "), fill: "none", stroke: d.line, "stroke-width": 2.6 }, g);
+    pts.forEach((p, i) => {
+      el("circle", { cx: p[0], cy: p[1], r: 5, fill: d.line, stroke: "#fff", "stroke-width": 2 }, g);
+      el("text", { x: p[0], y: p[1] - 10, "font-size": 11.5, "font-weight": 700, fill: d.line, "text-anchor": "middle", "font-family": MONO }, g, d.r[i].toFixed(1));
+    });
+    document.getElementById("trendLegend").innerHTML =
+      `<span class="item"><span class="box" style="background:${d.bar}"></span>${d.name}（千人、左軸）</span>` +
+      `<span class="item"><span class="sw" style="background:${d.line}"></span>雇用者全体に占める割合（％、右軸）</span>`;
+  }
+  bindSeg("trendSeg", k => draw(+k));
+  draw(0);
+})();
+
+/* =========================================
+   副業・兼業の希望と実現（全国就業実態パネル調査）
+   ========================================= */
+(function () {
+  const g = document.getElementById("rwChart");
+  const D = [
+    { x: ["2017", "18", "19", "20", "21", "22", "23", "24", "25"], all: [35.0, 34.7, 35.9, 34.5, 33.3, 33.8, 33.6, 31.2, 30.2], reg: [35.6, 36.1, 37.3, 35.6, 34.5, 35.2, 34.8, 32.1, 30.7], yMax: 50 },
+    { x: ["17→18", "18→19", "19→20", "20→21", "21→22", "22→23", "23→24", "24→25"], all: [9.5, 9.6, 9.2, 9.8, 9.5, 9.3, 9.5, 9.7], reg: [8.4, 8.2, 8.2, 8.2, 8.6, 8.1, 8.0, 7.9], yMax: 50 }
+  ];
+  const L = 50, R = 650, T = 14, B = 236;
+  function draw(k) {
+    const d = D[k];
+    clear(g);
+    const Y = v => B - v / d.yMax * (B - T);
+    for (let v = 0; v <= d.yMax; v += 10) {
+      el("line", { x1: L, x2: R, y1: Y(v), y2: Y(v), stroke: "#eceae3" }, g);
+      el("text", { x: L - 8, y: Y(v) + 4, "font-size": 11, fill: "#6b7280", "text-anchor": "end", "font-family": MONO }, g, v);
+    }
+    el("text", { x: L - 8, y: T - 2, "font-size": 11, fill: "#6b7280", "text-anchor": "end" }, g, "（％）");
+    el("line", { x1: L, x2: R, y1: B, y2: B, stroke: "#6b7280", "stroke-width": 1.2 }, g);
+    const step = (R - L) / d.x.length;
+    const X = i => L + step * (i + .5);
+    d.x.forEach((lb, i) => el("text", { x: X(i), y: B + 18, "font-size": 11, fill: "#6b7280", "text-anchor": "middle", "font-family": MONO }, g, lb));
+    [["all", "#0e7490", -10], ["reg", "#b45309", 18]].forEach(([key, col, dy]) => {
+      const v = d[key];
+      el("path", { d: v.map((y, i) => (i ? "L" : "M") + X(i).toFixed(1) + "," + Y(y).toFixed(1)).join(" "), fill: "none", stroke: col, "stroke-width": 2.6 }, g);
+      v.forEach((y, i) => {
+        el("circle", { cx: X(i), cy: Y(y), r: 4.5, fill: col, stroke: "#fff", "stroke-width": 2 }, g);
+        const up = k === 0 ? (key === "reg" ? -10 : 18) : dy;
+        el("text", { x: X(i), y: Y(y) + up, "font-size": 11, fill: col, "text-anchor": "middle", "font-family": MONO, "font-weight": 700 }, g, y.toFixed(1));
+      });
+    });
+  }
+  bindSeg("rwSeg", k => draw(+k));
+  draw(0);
+})();
+
+/* =========================================
+   本業の所得階層別に見た副業者
+   ========================================= */
+(function () {
+  const g = document.getElementById("incChart");
+  const LB = ["〜99", "100〜199", "200〜299", "300〜399", "400〜499", "500〜599", "600〜699", "700〜999", "1000〜"];
+  const D = [
+    { n: [606, 534, 354, 194, 130, 88, 65, 114, 125], r: [6.6, 5.1, 3.2, 2.3, 2.1, 2.1, 2.2, 2.6, 6.4], nMax: 700, rMax: 7, ticks: 7, share: "副業者のうち、本業の所得が299万円以下の人は <b>67.3％</b>、300万円以上の人は 32.2％。人数で見ると<strong>低所得層が中心</strong>だが、割合で見ると<strong>1000万円以上の層も6.4％</strong>と高い。" },
+    { n: [23, 69, 143, 117, 86, 62, 42, 77, 58], r: [4.6, 3.0, 2.0, 1.7, 1.6, 1.6, 1.6, 2.0, 4.2], nMax: 160, rMax: 4.8, ticks: 8, share: "正規の職員・従業員に限ると、本業の所得が300万円以上の人が <b>64.9％</b>、299万円以下は 34.5％。人数は中間層が多いが、割合はやはり<strong>両端（4.6％と4.2％）が高いU字型</strong>。" }
+  ];
+  const L = 52, R = 620, T = 20, B = 250;
+  function draw(k) {
+    const d = D[k];
+    clear(g);
+    const Y = v => B - v / d.nMax * (B - T);
+    const Yr = v => B - v / d.rMax * (B - T);
+    for (let i = 0; i <= d.ticks; i++) {
+      const v = d.nMax / d.ticks * i;
+      el("line", { x1: L, x2: R, y1: Y(v), y2: Y(v), stroke: "#eceae3" }, g);
+      el("text", { x: L - 8, y: Y(v) + 4, "font-size": 11, fill: "#6b7280", "text-anchor": "end", "font-family": MONO }, g, Math.round(v));
+      el("text", { x: R + 8, y: Yr(d.rMax / d.ticks * i) + 4, "font-size": 11, fill: "#0e7490", "font-family": MONO }, g, (d.rMax / d.ticks * i).toFixed(1));
+    }
+    el("text", { x: L - 8, y: T - 8, "font-size": 11, fill: "#6b7280", "text-anchor": "end" }, g, "（千人）");
+    el("text", { x: R + 8, y: T - 8, "font-size": 11, fill: "#0e7490" }, g, "（％）");
+    el("line", { x1: L, x2: R, y1: B, y2: B, stroke: "#6b7280", "stroke-width": 1.2 }, g);
+    const step = (R - L) / LB.length, bw = 36;
+    const pts = [];
+    LB.forEach((lb, i) => {
+      const cx = L + step * (i + .5);
+      el("rect", { x: cx - bw / 2, y: Y(d.n[i]), width: bw, height: B - Y(d.n[i]), rx: 3, fill: "#d6a35c", "fill-opacity": .85 }, g);
+      el("text", { x: cx, y: B - 7, "font-size": 10.5, "font-weight": 700, fill: "#fff", "text-anchor": "middle", "font-family": MONO }, g, d.n[i]);
+      el("text", { x: cx, y: B + 16, "font-size": 10.5, fill: "#6b7280", "text-anchor": "middle", "font-family": MONO }, g, lb);
+      pts.push([cx, Yr(d.r[i])]);
+    });
+    el("text", { x: (L + R) / 2, y: B + 34, "font-size": 11, fill: "#6b7280", "text-anchor": "middle" }, g, "本業の所得（万円）");
+    el("path", { d: pts.map((p, i) => (i ? "L" : "M") + p[0].toFixed(1) + "," + p[1].toFixed(1)).join(" "), fill: "none", stroke: "#0e7490", "stroke-width": 2.6 }, g);
+    pts.forEach((p, i) => {
+      const edge = i === 0 || i === LB.length - 1;
+      el("circle", { cx: p[0], cy: p[1], r: edge ? 6 : 4.5, fill: edge ? "#dc2626" : "#0e7490", stroke: "#fff", "stroke-width": 2 }, g);
+      el("text", { x: p[0] + (i === 0 ? 10 : i === LB.length - 1 ? -10 : 0), y: p[1] - 10, "font-size": 11.5, "font-weight": 700, fill: edge ? "#b91c1c" : "#0e7490", "text-anchor": i === 0 ? "start" : i === LB.length - 1 ? "end" : "middle", "font-family": MONO }, g, d.r[i].toFixed(1) + "%");
+    });
+    document.getElementById("incVerdict").innerHTML = d.share;
+  }
+  bindSeg("incSeg", k => draw(+k));
+  draw(0);
+})();
+
+/* =========================================
+   副業を選択した理由と今後の希望
+   ========================================= */
+(function () {
+  const g = document.getElementById("rsnChart");
+  const D = [
+    { lb: ["十分な収入", "自分のやりたい仕事", "スキルアップ・資格の活用", "働く場所の自由", "その他"], a: [43, 32, 15, 9, 5], b: [44, 21, 11, 10, 5], yMax: 50 },
+    { lb: ["今後も兼業・副業を続けたい", "本業先に専念したい", "兼業先に専念したい", "法人化（起業）したい", "その他", "分からない"], a: [65, 14, 6, 2, 0, 13], b: [58, 21, 3, 1, 1, 16], yMax: 70 }
+  ];
+  const L = 46, R = 660, T = 14, B = 200;
+  function draw(k) {
+    const d = D[k];
+    clear(g);
+    const Y = v => B - v / d.yMax * (B - T);
+    for (let v = 0; v <= d.yMax; v += 10) {
+      el("line", { x1: L, x2: R, y1: Y(v), y2: Y(v), stroke: "#eceae3" }, g);
+      el("text", { x: L - 8, y: Y(v) + 4, "font-size": 11, fill: "#6b7280", "text-anchor": "end", "font-family": MONO }, g, v + "%");
+    }
+    el("line", { x1: L, x2: R, y1: B, y2: B, stroke: "#6b7280", "stroke-width": 1.2 }, g);
+    const step = (R - L) / d.lb.length, bw = Math.min(34, step / 3);
+    d.lb.forEach((lb, i) => {
+      const cx = L + step * (i + .5);
+      [[d.a[i], "#d6a35c", -bw], [d.b[i], "#1e3a8a", 0]].forEach(([v, col, off]) => {
+        el("rect", { x: cx + off, y: Y(v), width: bw, height: Math.max(B - Y(v), 1), rx: 3, fill: col, "fill-opacity": .88 }, g);
+        el("text", { x: cx + off + bw / 2, y: Y(v) - 5, "font-size": 11, "font-weight": 700, fill: "#1f2937", "text-anchor": "middle", "font-family": MONO }, g, v + "%");
+      });
+      // ラベルは2行に折り返す
+      const cut = lb.indexOf("・") > 0 ? lb.indexOf("・") + 1 : Math.ceil(lb.length / 2);
+      const lines = lb.length > 6 ? [lb.slice(0, cut), lb.slice(cut)] : [lb];
+      lines.forEach((t, j) => el("text", { x: cx, y: B + 18 + j * 15, "font-size": 11.5, fill: "#4b5563", "text-anchor": "middle" }, g, t));
+    });
+  }
+  bindSeg("rsnSeg", k => draw(+k));
+  draw(0);
+})();
+
+/* =========================================
+   経団連：副業・兼業を認めているか（100％積み上げ）
+   ========================================= */
+(function () {
+  const g = document.getElementById("kdChart");
+  const COLS = ["#1e3a8a", "#93a5cf", "#d1d5db", "#f1f1ec"];
+  const TXT = ["#fff", "#1e3a8a", "#4b5563", "#6b7280"];
+  const D = [
+    [["企業規模計", 53.1, 17.5, 21.5, 8.0], ["5000人以上", 66.7, 17.2, 12.6, 3.4], ["1000〜5000人未満", 52.3, 20.6, 18.7, 8.4], ["300〜1000人未満", 44.4, 13.9, 25.0, 16.7], ["100〜300人未満", 38.5, 15.4, 38.5, 7.7], ["100人未満", 31.6, 10.5, 47.4, 10.5]],
+    [["積極的に取り組んでいる（135社）", 63.0, 20.7, 12.6, 3.7, 83.7], ["適度に取り組んでいる（72社）", 43.1, 15.3, 27.8, 13.9, 58.3], ["取り組んでいない（65社）", 41.5, 13.8, 33.8, 10.8, 55.4]]
+  ];
+  const L = 200, R = 660, T = 10;
+  function draw(k) {
+    const rows = D[k];
+    clear(g);
+    const rowH = k === 0 ? 44 : 70, bh = k === 0 ? 30 : 44;
+    rows.forEach((r, i) => {
+      const y = T + i * rowH + (k === 0 ? (i > 0 ? 10 : 0) : 14);
+      el("text", { x: L - 10, y: y + bh / 2 + 4, "font-size": 12, fill: "#1f2937", "text-anchor": "end", "font-weight": i === 0 && k === 0 ? 700 : 400 }, g, r[0]);
+      let x = L;
+      for (let j = 0; j < 4; j++) {
+        const w = r[j + 1] / 100 * (R - L);
+        el("rect", { x, y, width: w, height: bh, fill: COLS[j] }, g);
+        if (w > 30) el("text", { x: x + w / 2, y: y + bh / 2 + 4, "font-size": j < 2 ? 12 : 11, "font-weight": j < 2 ? 700 : 400, fill: TXT[j], "text-anchor": "middle", "font-family": MONO }, g, r[j + 1].toFixed(1));
+        x += w;
+      }
+      const both = r[1] + r[2];
+      el("rect", { x: L, y, width: both / 100 * (R - L), height: bh, fill: "none", stroke: "#1e3a8a", "stroke-width": 1.6 }, g);
+      if (k === 1) el("text", { x: L + both / 100 * (R - L), y: y - 4, "font-size": 11.5, "font-weight": 700, fill: "#1e3a8a", "text-anchor": "end", "font-family": MONO }, g, "認めている＋予定 " + r[5].toFixed(1) + "%");
+    });
+    if (k === 0) el("line", { x1: 20, x2: R, y1: T + 44 + 2, y2: T + 44 + 2, stroke: "#9ca3af", "stroke-dasharray": "4 4" }, g);
+    el("text", { x: R, y: T + rows.length * rowH + (k === 0 ? 22 : 8), "font-size": 11, fill: "#6b7280", "text-anchor": "end" }, g, k === 0 ? "※四捨五入により、合計が100％にならない場合がある" : "※全回答企業275社のうち、当該質問に未回答の3社を除く272社における比率");
+  }
+  bindSeg("kdSeg", k => draw(+k));
+  draw(0);
+})();
+
+/* =========================================
+   副業・兼業を許可しない理由（JILPT）
+   ========================================= */
+(function () {
+  const g = document.getElementById("jilptBars");
+  const D = [
+    ["過重労働となり、本業に支障をきたすため", 82.7], ["労働時間の管理・把握が困難になる", 45.3],
+    ["職場の他の従業員の業務負担が増大する懸念", 35.2], ["組織内の知識や技術の漏えいが懸念される", 31.4],
+    ["人材の流出につながる懸念がある", 28.4], ["組織としての統制力が弱まる懸念がある", 20.2],
+    ["経営トップの理解が得られない", 10.7], ["その他", 2.7], ["無回答", 6.2]
+  ];
+  const L = 290, R = 620, T = 8, rowH = 31;
+  D.forEach((d, i) => {
+    const y = T + i * rowH;
+    const w = d[1] / 90 * (R - L);
+    el("text", { x: L - 10, y: y + 17, "font-size": 12, fill: i < 2 ? "#1f2937" : "#4b5563", "text-anchor": "end", "font-weight": i < 2 ? 700 : 400 }, g, d[0]);
+    el("rect", { x: L, y: y + 5, width: R - L, height: 18, rx: 4, fill: "#f1f1ec" }, g);
+    el("rect", { x: L, y: y + 5, width: w, height: 18, rx: 4, fill: i < 2 ? "#b45309" : "#94a3b8" }, g);
+    el("text", { x: L + w + 6, y: y + 18, "font-size": 11.5, fill: "#1f2937", "font-family": MONO }, g, d[1].toFixed(1));
+  });
+})();
+
+/* =========================================
+   労働時間の通算と割増賃金
+   ========================================= */
+(function () {
+  const g = document.getElementById("otChart");
+  const sA = document.getElementById("otA"), sB = document.getElementById("otB"), sW = document.getElementById("otW");
+  let first = "A", know = true;
+  const L = 40, R = 650, maxH = 16;
+  const X = h => L + h / maxH * (R - L);
+  function draw() {
+    const a = +sA.value, b = +sB.value, w = +sW.value;
+    document.getElementById("otAOut").textContent = a + " 時間";
+    document.getElementById("otBOut").textContent = b + " 時間";
+    document.getElementById("otWOut").textContent = fmt(w) + " 円";
+    clear(g);
+    const seq = first === "A" ? [["A", a, "#0e7490"], ["B", b, "#b45309"]] : [["B", b, "#b45309"], ["A", a, "#0e7490"]];
+    const later = seq[1][0];
+    const total = a + b, over = Math.max(0, total - 8);
+    const y = 50, h = 46;
+    for (let t = 0; t <= maxH; t += 2) {
+      el("line", { x1: X(t), x2: X(t), y1: y - 6, y2: y + h + 6, stroke: "#eceae3" }, g);
+      el("text", { x: X(t), y: y + h + 22, "font-size": 11, fill: "#6b7280", "text-anchor": "middle", "font-family": MONO }, g, t);
+    }
+    el("text", { x: R, y: y + h + 38, "font-size": 11, fill: "#6b7280", "text-anchor": "end" }, g, "通算した1日の労働時間（時間）");
+    let x0 = 0;
+    seq.forEach(([nm, hh, col], i) => {
+      el("rect", { x: X(x0), y, width: X(x0 + hh) - X(x0), height: h, rx: 5, fill: col, "fill-opacity": .2, stroke: col, "stroke-width": 1.6 }, g);
+      el("text", { x: (X(x0) + X(x0 + hh)) / 2, y: y + 20, "font-size": 12.5, "font-weight": 700, fill: col, "text-anchor": "middle" }, g, "事業主" + nm + (i === 0 ? "（先に契約）" : "（後に契約）"));
+      el("text", { x: (X(x0) + X(x0 + hh)) / 2, y: y + 36, "font-size": 11.5, fill: "#4b5563", "text-anchor": "middle", "font-family": MONO }, g, hh + " 時間");
+      x0 += hh;
+    });
+    if (over > 0) {
+      el("rect", { x: X(8), y: y - 2, width: X(total) - X(8), height: h + 4, fill: "#dc2626", "fill-opacity": .12, stroke: "#dc2626", "stroke-dasharray": "4 3" }, g);
+      el("text", { x: (X(8) + X(total)) / 2, y: y - 10, "font-size": 12, "font-weight": 700, fill: "#b91c1c", "text-anchor": "middle" }, g, "法定外 " + over + " 時間");
+    }
+    el("line", { x1: X(8), x2: X(8), y1: 18, y2: y + h + 8, stroke: "#1e3a8a", "stroke-width": 2 }, g);
+    el("text", { x: X(8), y: 14, "font-size": 11.5, "font-weight": 700, fill: "#1e3a8a", "text-anchor": "middle" }, g, "法定労働時間 8時間");
+
+    const v = document.getElementById("otVerdict");
+    if (over === 0) {
+      v.className = "verdict good";
+      v.innerHTML = `通算 <span class="readout">${total} 時間</span> は8時間以内なので、時間外労働は発生しない。`;
+      return;
+    }
+    const laterH = later === "A" ? a : b;
+    const otH = Math.min(over, laterH);
+    const prem = Math.round(otH * w * 0.25);
+    if (!know) {
+      v.className = "verdict";
+      v.innerHTML = `通算 <span class="readout">${total} 時間</span> で法定外労働は <b>${over} 時間</b>。ただし、後から契約した事業主${later}が<strong>副業を知らなかった</strong>場合、タイミー事件の判断に従えば、通算した割増賃金の支払義務は<strong>生じない</strong>。労働者が申告しなければ、割増賃金も健康管理も働かない。`;
+      return;
+    }
+    v.className = "verdict bad";
+    v.innerHTML = `通算 <span class="readout">${total} 時間</span> で法定外労働は <b class="bad">${over} 時間</b>。原則として、<strong>後から契約した事業主${later}</strong>（所定 ${laterH} 時間）の時間外労働になり、事業主${later}が割増賃金（25％以上）を払う。` +
+      ` 割増分だけで <span class="readout">${otH} 時間 × ${fmt(w)} 円 × 0.25 = ${fmt(prem)} 円</span>／日。事業主${later}の時間外労働の割合は ${(otH / laterH * 100).toFixed(0)}％で、事業主${later}には36協定の締結も必要になる。`;
+  }
+  bindSeg("otOrder", k => { first = k; draw(); });
+  bindSeg("otKnow", k => { know = k === "1"; draw(); });
+  [sA, sB, sW].forEach(s => s.addEventListener("input", draw));
+  draw();
+})();
+
+/* =========================================
+   労働時間制約モデル（Shishko & Rostker 1976）
+   ========================================= */
+(function () {
+  const c = document.getElementById("mlCanvas");
+  const sW = document.getElementById("mlW"), sWh = document.getElementById("mlWh");
+  const sH = document.getElementById("mlH"), sV = document.getElementById("mlV"), sA = document.getElementById("mlA");
+  const T = 24;
+  // 最適解：{ type, L, C, m, h }
+  function solve(w, wh, H, V, a) {
+    const Lu = Math.min(T, (1 - a) * (V + w * T) / w);   // 本業の上限がない場合の余暇
+    if (Lu >= T - H) return { type: Lu >= T ? "none" : "free", L: Lu, C: V + w * (T - Lu), m: 0, h: T - Lu, Lu };
+    const Ck = V + w * H, Lk = T - H;
+    const mrs = (1 - a) / a * Ck / Lk;
+    if (mrs >= wh) return { type: "kink", L: Lk, C: Ck, m: 0, h: H, mrs, Lu };
+    const L2 = (1 - a) * (V + w * H + wh * (T - H)) / wh;
+    return { type: "moon", L: L2, C: V + w * H + wh * (T - H - L2), m: T - H - L2, h: H, mrs, Lu };
+  }
+  function draw() {
+    let w = +sW.value, wh = +sWh.value;
+    if (wh > w) { wh = w; sWh.value = wh; }
+    const H = +sH.value, V = +sV.value, a = +sA.value;
+    document.getElementById("mlWOut").textContent = fmt(w) + " 円";
+    document.getElementById("mlWhOut").textContent = fmt(wh) + " 円";
+    document.getElementById("mlHOut").textContent = H + " 時間";
+    document.getElementById("mlVOut").textContent = fmt(V) + " 円";
+    document.getElementById("mlAOut").textContent = a.toFixed(2);
+    const s = solve(w, wh, H, V, a);
+
+    const dpr = window.devicePixelRatio || 1;
+    const cssW = c.clientWidth, cssH = c.clientHeight;
+    c.width = cssW * dpr; c.height = cssH * dpr;
+    const ctx = c.getContext("2d");
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    ctx.clearRect(0, 0, cssW, cssH);
+    const pad = { l: 62, r: 18, t: 18, b: 40 };
+    const yMax = Math.max(20000, Math.ceil((V + w * T) * 1.05 / 10000) * 10000);
+    const yStep = yMax > 50000 ? 20000 : 10000;
+    const xToPx = x => pad.l + x / T * (cssW - pad.l - pad.r);
+    const yToPx = y => cssH - pad.b - y / yMax * (cssH - pad.t - pad.b);
+
+    // グリッドと軸
+    ctx.strokeStyle = "#eceae3"; ctx.lineWidth = 1;
+    ctx.font = "11px JetBrains Mono, monospace"; ctx.fillStyle = "#6b7280";
+    ctx.textAlign = "center";
+    for (let x = 0; x <= T; x += 4) {
+      ctx.beginPath(); ctx.moveTo(xToPx(x), pad.t); ctx.lineTo(xToPx(x), cssH - pad.b); ctx.stroke();
+      ctx.fillText(x, xToPx(x), cssH - pad.b + 16);
+    }
+    ctx.textAlign = "right";
+    for (let y = 0; y <= yMax; y += yStep) {
+      ctx.beginPath(); ctx.moveTo(pad.l, yToPx(y)); ctx.lineTo(cssW - pad.r, yToPx(y)); ctx.stroke();
+      ctx.fillText(fmt(y), pad.l - 6, yToPx(y) + 4);
+    }
+    ctx.strokeStyle = "#6b7280"; ctx.lineWidth = 1.2;
+    ctx.beginPath(); ctx.moveTo(pad.l, pad.t); ctx.lineTo(pad.l, cssH - pad.b); ctx.lineTo(cssW - pad.r, cssH - pad.b); ctx.stroke();
+    ctx.fillStyle = "#4b5563"; ctx.font = "12px Noto Sans JP, sans-serif";
+    ctx.textAlign = "right"; ctx.fillText("余暇 L（時間／日）", cssW - pad.r, cssH - 6);
+    ctx.textAlign = "left"; ctx.fillText("消費 C（円／日）", pad.l + 6, pad.t + 10);
+
+    ctx.save();
+    ctx.beginPath(); ctx.rect(pad.l, pad.t, cssW - pad.l - pad.r, cssH - pad.t - pad.b); ctx.clip();
+    // 制約がない場合の予算線
+    ctx.setLineDash([5, 4]); ctx.strokeStyle = "#9ca3af"; ctx.lineWidth = 1.6;
+    ctx.beginPath(); ctx.moveTo(xToPx(T - H), yToPx(V + w * H)); ctx.lineTo(xToPx(0), yToPx(V + w * T)); ctx.stroke();
+    ctx.setLineDash([]);
+    // 予算線（本業）
+    ctx.strokeStyle = "#0e7490"; ctx.lineWidth = 2.6;
+    ctx.beginPath(); ctx.moveTo(xToPx(T), yToPx(V)); ctx.lineTo(xToPx(T - H), yToPx(V + w * H)); ctx.stroke();
+    // 予算線（副業）
+    ctx.strokeStyle = "#b45309"; ctx.lineWidth = 2.8;
+    ctx.beginPath(); ctx.moveTo(xToPx(T - H), yToPx(V + w * H)); ctx.lineTo(xToPx(0), yToPx(V + w * H + wh * (T - H))); ctx.stroke();
+    // キンクの補助線
+    ctx.setLineDash([3, 3]); ctx.strokeStyle = "#9ca3af"; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(xToPx(T - H), yToPx(V + w * H)); ctx.lineTo(xToPx(T - H), cssH - pad.b); ctx.stroke();
+    ctx.setLineDash([]);
+    // 無差別曲線
+    const U = Math.pow(s.C, a) * Math.pow(s.L, 1 - a);
+    ctx.strokeStyle = "#64748b"; ctx.lineWidth = 1.8; ctx.beginPath();
+    let started = false;
+    for (let i = 1; i <= 240; i++) {
+      const Lx = T * i / 240;
+      const Cy = Math.pow(U / Math.pow(Lx, 1 - a), 1 / a);
+      if (Cy > yMax * 1.5) continue;
+      const px = xToPx(Lx), py = yToPx(Cy);
+      started ? ctx.lineTo(px, py) : ctx.moveTo(px, py);
+      started = true;
+    }
+    ctx.stroke();
+    // 制約がない場合の最適点
+    if (s.type === "kink" || s.type === "moon") {
+      const Cu = V + w * (T - s.Lu);
+      ctx.beginPath(); ctx.arc(xToPx(s.Lu), yToPx(Cu), 5, 0, Math.PI * 2);
+      ctx.fillStyle = "#fff"; ctx.fill(); ctx.lineWidth = 2; ctx.strokeStyle = "#9ca3af"; ctx.stroke();
+    }
+    ctx.restore();
+
+    // 最適点
+    ctx.beginPath(); ctx.arc(xToPx(s.L), yToPx(s.C), 6, 0, Math.PI * 2);
+    ctx.fillStyle = "#dc2626"; ctx.fill(); ctx.lineWidth = 2; ctx.strokeStyle = "#fff"; ctx.stroke();
+    ctx.font = "12px Noto Sans JP, sans-serif"; ctx.fillStyle = "#4b5563"; ctx.textAlign = "left";
+    ctx.fillText("キンク（本業 " + H + " 時間）", xToPx(T - H) + 6, cssH - pad.b - 8);
+    // 副業時間の区間
+    if (s.type === "moon") {
+      const yb = cssH - pad.b - 24;
+      ctx.fillStyle = "rgba(254, 243, 199, .95)";
+      ctx.fillRect(xToPx(s.L), yb - 10, xToPx(T - H) - xToPx(s.L), 10);
+      ctx.fillStyle = "#92400e"; ctx.textAlign = "center";
+      ctx.fillText("副業 " + s.m.toFixed(1) + "h", (xToPx(s.L) + xToPx(T - H)) / 2, yb - 14);
+    }
+
+    const v = document.getElementById("mlVerdict");
+    if (s.type === "none" || s.type === "free") {
+      v.className = "verdict";
+      v.innerHTML = `本業の上限がなくても <span class="readout">${s.h.toFixed(1)} 時間</span> しか働きたくない。本業の上限 ${H} 時間は<strong>制約になっていない</strong>ので、副業はしない。`;
+    } else if (s.type === "kink") {
+      v.className = "verdict";
+      v.innerHTML = `本業の上限がなければ <span class="readout">${(T - s.Lu).toFixed(1)} 時間</span> 働きたいので、上限 ${H} 時間に<strong>縛られている</strong>。しかし、キンクでの MRS <span class="readout">${fmt(Math.round(s.mrs))} 円</span> が副業の時給 ${fmt(wh)} 円以上なので、低い時給で働くより余暇を選ぶ。<strong>副業はしない</strong>（キンクに留まる）。`;
+    } else {
+      v.className = "verdict good";
+      v.innerHTML = `キンクでの MRS <span class="readout">${fmt(Math.round(s.mrs))} 円</span> ＜ 副業の時給 ${fmt(wh)} 円なので、<b class="good">副業を ${s.m.toFixed(1)} 時間</b> する（本業 ${H} 時間＋副業、合計 ${(H + s.m).toFixed(1)} 時間）。副業収入は <span class="readout">${fmt(Math.round(wh * s.m))} 円／日</span>。`;
+    }
+    // 比較静学：各パラメータを少し動かしたときの副業時間
+    const base = s.m;
+    const dm = (ww, wwh, HH, VV) => solve(ww, Math.min(wwh, ww), HH, VV, a).m - base;
+    const fmtd = x => (Math.abs(x) < 0.005 ? "±0.00" : (x > 0 ? "+" : "−") + Math.abs(x).toFixed(2));
+    const items = [
+      ["本業の時給 w を +100 円", dm(w + 100, wh, H, V)],
+      ["副業の時給 ŵ を +100 円", wh + 100 <= w ? dm(w, wh + 100, H, V) : null],
+      ["本業の上限 H̄ を +1 時間", dm(w, wh, H + 1, V)],
+      ["他の所得 V を +1,000 円", dm(w, wh, H, V + 1000)]
+    ];
+    document.getElementById("mlStatics").innerHTML = "<strong>比較静学</strong>（副業時間の変化）：" +
+      items.map(it => `${it[0]} → <span class="readout">${it[1] === null ? "ŵ ≤ w のため不可" : fmtd(it[1]) + " h"}</span>`).join("　");
+  }
+  [sW, sWh, sH, sV, sA].forEach(s => s.addEventListener("input", draw));
+  window.addEventListener("resize", draw);
+  draw();
+})();
+
+/* =========================================
+   localStorage への保存 / 読み込み
+   ========================================= */
+const STORAGE_KEY = "labor-lecture-f06-answers";
+function loadAnswers() {
+  try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}"); } catch { return {}; }
+}
+function saveAnswers(obj) {
+  try { localStorage.setItem(STORAGE_KEY, JSON.stringify(obj)); } catch { /* 保存できない環境では無視 */ }
+}
+function saveKey(key, value) {
+  const a = loadAnswers();
+  a[key] = value;
+  saveAnswers(a);
+}
+const answers = loadAnswers();
+document.querySelectorAll("textarea.answer-input").forEach(t => {
+  const qid = t.dataset.qid;
+  if (answers[qid]) t.value = answers[qid];
+  const indicator = document.querySelector(`.answer-save[data-for="${qid}"]`);
+  let saveTimer;
+  const setIndicator = (state) => {
+    if (!indicator) return;
+    if (state === "saved") { indicator.textContent = "保存済み"; indicator.classList.add("saved"); }
+    else if (state === "saving") { indicator.textContent = "保存中…"; indicator.classList.remove("saved"); }
+    else { indicator.textContent = "未保存"; indicator.classList.remove("saved"); }
+  };
+  if (t.value) setIndicator("saved");
+  t.addEventListener("input", () => {
+    setIndicator("saving");
+    clearTimeout(saveTimer);
+    saveTimer = setTimeout(() => {
+      saveKey(qid, t.value);
+      setIndicator("saved");
+    }, 350);
+  });
+});
+</script>
+</body>
+</html>
